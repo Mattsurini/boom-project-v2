@@ -40,10 +40,13 @@ copy_dir() {
   local src="$HERMES_HOME/$rel"
   if [[ -d "$src" ]]; then
     mkdir -p "$OUT/$rel"
-    # skip caches/compiled noise
-    rsync -a --exclude '__pycache__' --exclude '*.pyc' --exclude '.git' \
-          "$src"/ "$OUT/$rel"/ 2>/dev/null \
-      || cp -r "$src/." "$OUT/$rel/"
+    # Plain cp -r has no exclude, and rsync may not exist on Windows Git Bash
+    # (its absence silently fell through to the cp -r branch, dragging the
+    # plugin's own .git/ and __pycache__/ along). Copy the tree, then prune.
+    cp -r "$src/." "$OUT/$rel/"
+    find "$OUT/$rel" -name '.git' -type d -prune -exec rm -rf {} + 2>/dev/null || true
+    find "$OUT/$rel" -name '__pycache__' -type d -prune -exec rm -rf {} + 2>/dev/null || true
+    find "$OUT/$rel" -name '*.pyc' -delete 2>/dev/null || true
     printf '  [ok]   %-34s %s\n' "$rel/" "$why"
     copied=$((copied + 1))
   else
