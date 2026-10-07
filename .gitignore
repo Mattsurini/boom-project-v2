@@ -22,9 +22,16 @@ sandboxes/
 # auth.json holds a credential_pool (env var names + sha2 fingerprints, not raw
 # keys, but still machine state). sessions/ request dumps DO embed live
 # Authorization: Bearer <key> headers — 11 of 12 files as of 2026-10-07.
+# config.yaml is a stale project-local Hermes config (nothing reads it; the live
+# one is %LOCALAPPDATA%\hermes\config.yaml) and carried a live nvidia api_key.
 auth.json
 sessions/
 .hermes_history
+config.yaml
+config.yaml.bak.*
+config.yaml.bak
+config.yaml.*.bak
+state.db*
 
 # Hermes skill-hub cache + curator runtime state, written into the live skill root
 .agents/skills/.hub/
