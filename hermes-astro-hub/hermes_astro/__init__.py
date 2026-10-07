@@ -1,0 +1,641 @@
+"""
+hermes_astro — Shared astrology calculation layer
+==================================================
+Used by: horary-astrology, integrated-astrology, and any Hermes astrology skill.
+
+Algorithm: flatlib personal orbs + Traditional 7 planets + cross-sign aspect check
+Ephemeris: xalen.swe (XALEN ephemeris) — PRIMARY.
+           pyswisseph 2.10.03 (genuine Swiss Ephemeris) — fallback if xalen
+           is not installed. Both expose the same Swiss API (calc_ut, julday,
+           houses, FLG_SPEED, body constants); for the Traditional 7 they agree
+           to <2 arcsec (Rahu ~9 arcsec is the worst case, where pyswisseph is
+           the reference). Run verify_engine() to confirm the live engine.
+
+DO NOT duplicate this code in individual skills.
+"""
+try:
+    import xalen.swe as swe
+    EPHEMERIS_ENGINE = "xalen"
+except ImportError:
+    try:
+        import swisseph as swe
+        EPHEMERIS_ENGINE = "pyswisseph"
+    except ImportError:
+        raise ImportError(
+            "hermes_astro needs an ephemeris engine: install xalen "
+            "(primary) or pyswisseph (fallback).  uv pip install xalen"
+        )
+from datetime import datetime, timezone, timedelta
+import math
+
+__version__ = "1.1.0"
+
+# ── Configuration ────────────────────────────────────────────────
+ICT = timezone(timedelta(hours=7))
+FLAGS = swe.FLG_SWIEPH | swe.FLG_SPEED
+
+TRAD7 = ['Sun', 'Moon', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn']
+OUTER3 = ['Uranus', 'Neptune', 'Pluto']
+
+TRAD7_CODES = {
+    'Sun': swe.SUN, 'Moon': swe.MOON, 'Mercury': swe.MERCURY,
+    'Venus': swe.VENUS, 'Mars': swe.MARS, 'Jupiter': swe.JUPITER,
+    'Saturn': swe.SATURN
+}
+# Outer-planet body ids. Both live engines (xalen.swe and pyswisseph)
+# expose these with identical values (URANUS 7, NEPTUNE 8, PLUTO 9).
+OUTER_CODES = {
+    'Uranus': swe.URANUS, 'Neptune': swe.NEPTUNE, 'Pluto': swe.PLUTO
+}
+ALL_BODY_CODES = {**TRAD7_CODES, **OUTER_CODES}
+
+# -- Orb systems ---------------------------------------------------------
+# Every system is a table of FULL orbs per body. The effective orb for an
+# aspect between two bodies is the MEAN of their full orbs:
+#     effective_orb(a, b) = (full_a + full_b) / 2
+# the traditional moiety (half-orb) formula, continuous from Sahl ibn Bishr
+# (820 CE) through Lilly (1647).
+#
+# BOOM_FULL_ORBS is the Boom reference table, fitted to the three verified
+# ground-truth transit charts (2026-09-09, 2026-10-14, 2026-10-20). Source of
+# truth: stellium/src/stellium/engines/orbs.py :: BOOM_FULL_ORBS. Two values
+# differ from the classic AstroGold table, both forced by the GT:
+#   Moon 12 -> 11   (else an extra Moon-Saturn sextile appears on 10-20)
+#   Neptune 5 -> 7  (else the Mars-Neptune trine at 6d33' is dropped on 10-14)
+# Jupiter stays at the classic 8: a 7 drops the Jupiter-Saturn trine at 6d26'
+# on 09-25, so moiety (8+5)/2 = 6.5 covers it and 7 does not.
+BOOM_FULL_ORBS = {
+    'Sun': 10.0, 'Moon': 11.0, 'Mercury': 7.0, 'Venus': 6.0,
+    'Mars': 7.0, 'Jupiter': 8.0, 'Saturn': 5.0,
+    'Uranus': 5.0, 'Neptune': 7.0, 'Pluto': 5.0,
+    'Chiron': 3.0, 'True Node': 3.0, 'Mean Node': 3.0,
+}
+
+# flatlib personal orbs (props.object.orb). This is VOC / horary's
+# documented basis, so it stays available and selectable.
+FLATLIB_FULL_ORBS = {
+    'Sun': 15, 'Moon': 12, 'Mercury': 7, 'Venus': 7,
+    'Mars': 8, 'Jupiter': 9, 'Saturn': 9,
+    'Uranus': 5, 'Neptune': 5, 'Pluto': 5,
+}
+
+ORB_SYSTEMS = {'boom': BOOM_FULL_ORBS, 'flatlib': FLATLIB_FULL_ORBS}
+
+# Active orb system. 'boom' reproduces the verified GT transit charts
+# exactly; switch to 'flatlib' for VOC / horary work.
+ORB_SYSTEM = 'boom'
+
+# Module-level tables mirroring the active system, for consumers that read
+# these names directly.
+PLANET_ORBS = {b: BOOM_FULL_ORBS[b] for b in TRAD7}
+OUTER_ORBS = {b: BOOM_FULL_ORBS[b] for b in OUTER3}
+# Full active table, including minor bodies (Chiron, the Nodes) that carry no
+# ephemeris code but do carry an orb allowance.
+ALL_ORBS = dict(BOOM_FULL_ORBS)
+
+
+def set_orb_system(name):
+    """Select the active orb system ('boom' or 'flatlib').
+
+    Rewrites PLANET_ORBS / OUTER_ORBS / ALL_ORBS in place so existing
+    consumers that read those names keep working.
+    """
+    if name not in ORB_SYSTEMS:
+        raise ValueError(f"unknown orb system {name!r}; "
+                         f"choose from {sorted(ORB_SYSTEMS)}")
+    global ORB_SYSTEM
+    table = ORB_SYSTEMS[name]
+    PLANET_ORBS.clear()
+    OUTER_ORBS.clear()
+    PLANET_ORBS.update({b: table[b] for b in TRAD7 if b in table})
+    OUTER_ORBS.update({b: table[b] for b in OUTER3 if b in table})
+    ALL_ORBS.clear()
+    ALL_ORBS.update(table)
+    ORB_SYSTEM = name
+    return ORB_SYSTEM
+
+
+def orb_allowance(name_a, name_b):
+    """Effective orb for an aspect between two bodies under the active orb
+    system: the mean of the two bodies' full orbs (moiety)."""
+    table = ORB_SYSTEMS[ORB_SYSTEM]
+    return (table.get(name_a, 3.0) + table.get(name_b, 3.0)) / 2.0
+
+SIGNS = ['♈Aries','♉Taurus','♊Gemini','♋Cancer','♌Leo','♍Virgo',
+         '♎Libra','♏Scorpio','♐Sagittarius','♑Capricorn','♒Aquarius','♓Pisces']
+SIGNS_SHORT = ['♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓']
+
+MAJOR_ASPECTS = [0, 60, 90, 120, 180]
+ASPECT_NAMES = {0: 'conj', 60: 'sext', 90: 'sq', 120: 'trine', 180: 'opp'}
+ASPECT_SYMS = {0: '☌', 60: '⚹', 90: '□', 120: '△', 180: '☍'}
+ASPECT_ORBS = {0: 8, 60: 6, 90: 7, 120: 8, 180: 8}  # for reference only
+
+MAX_EXACT_ORB = 0.3  # flatlib MAX_EXACT_ORB
+
+
+# ── Time utilities ───────────────────────────────────────────────
+
+def jd_utc(dt_local):
+    """Convert local ICT datetime to Julian Day (UTC)."""
+    dt_u = dt_local.astimezone(timezone.utc)
+    return swe.julday(dt_u.year, dt_u.month, dt_u.day,
+                      dt_u.hour + dt_u.minute/60.0 + dt_u.second/3600.0)
+
+
+# ── Ephemeris ────────────────────────────────────────────────────
+
+def planet_position(jd, planet_code):
+    """Get (lon, speed) for a single planet at JD (UTC)."""
+    arr, _ = swe.calc_ut(jd, planet_code, FLAGS)
+    return arr[0], arr[3]
+
+
+def all_positions(jd, planets=None):
+    """Get dict of {name: {'lon': float, 'speed': float}} for given bodies.
+
+    Accepts any body in ALL_BODY_CODES: the Traditional 7 plus
+    Uranus / Neptune / Pluto. Defaults to Traditional 7.
+    """
+    if planets is None:
+        planets = TRAD7
+    pos = {}
+    for name in planets:
+        try:
+            code = ALL_BODY_CODES[name]
+        except KeyError:
+            raise KeyError(
+                f"unknown body {name!r}; known bodies: "
+                f"{sorted(ALL_BODY_CODES)}") from None
+        lon, spd = planet_position(jd, code)
+        pos[name] = {'lon': lon, 'speed': spd}
+    return pos
+
+
+def verify_engine():
+    """Report which ephemeris engine is live and sanity-check it against a
+    fixed golden position. Returns a dict:
+      {'engine': str, 'ok': bool, 'detail': str}
+    Use this to confirm the calculation layer is on a working engine before
+    trusting any chart. The golden check (Sun at J2000 ~280.5 deg) is
+    engine-independent: both pyswisseph and xalen must pass it.
+    """
+    out = {'engine': EPHEMERIS_ENGINE, 'ok': False, 'detail': ''}
+    try:
+        jd = swe.julday(2000, 1, 1, 12.0)  # J2000 epoch (TT)
+        arr, _ = swe.calc_ut(jd, swe.SUN, 0)
+        sun_lon = arr[0]
+        # Sun at J2000 (2000-01-01 12:00 TT) is ~280.5 deg ecliptic longitude.
+        if abs(sun_lon - 280.5) < 1.0:
+            out['ok'] = True
+            out['detail'] = f"{EPHEMERIS_ENGINE}: Sun@J2000 = {sun_lon:.4f} deg (expected ~280.5)"
+        else:
+            out['detail'] = f"{EPHEMERIS_ENGINE}: Sun@J2000 = {sun_lon:.4f} deg — OUT OF RANGE (expected ~280.5)"
+    except Exception as e:
+        out['detail'] = f"{EPHEMERIS_ENGINE}: verify failed — {type(e).__name__}: {e}"
+    return out
+
+
+# ── House calculation ────────────────────────────────────────────
+
+def houses(jd, lat, lon, hsys=b'P'):
+    """Get Placidus house cusps for a given time/location.
+    Returns (cusps_list_12, asc_lon, mc_lon).
+    """
+    cusps_raw, ascmc = swe.houses(jd, lat, lon, hsys)
+    cusps = list(cusps_raw) if len(cusps_raw) == 12 else list(cusps_raw[1:13])
+    return cusps, ascmc[0], ascmc[1]
+
+
+def house_of(lon, cusps):
+    """Return house number (1-12) for a given longitude."""
+    for i in range(12):
+        c1, c2 = cusps[i], cusps[(i + 1) % 12]
+        if c2 <= c1:
+            c2 += 360
+        lon_adj = lon if lon >= c1 else lon + 360
+        if c1 <= lon_adj < c2:
+            return i + 1
+    return 12
+
+
+# ── Aspect logic (flatlib) ───────────────────────────────────────
+
+def closest_distance(lon1, lon2):
+    """flatlib angle.closestdistance: signed CCW distance from lon1 to lon2."""
+    d = (lon2 - lon1) % 360
+    return d if d <= 180 else d - 360
+
+
+def check_aspect(active_lon, active_name, passive_lon, passive_name):
+    """Check all major aspects between two bodies using flatlib personal orbs.
+
+    Returns list of dicts:
+      {'asp': int_angle, 'name': str, 'sym': str, 'orb': float,
+       'movement': str, 'in_orb_active': bool}
+    movement: 'applicative', 'separative', 'exact'
+    """
+    sep = closest_distance(active_lon, passive_lon)
+    abs_sep = abs(sep)
+
+    results = []
+    for asp in MAJOR_ASPECTS:
+        orb = abs(abs_sep - asp)
+        name = ASPECT_NAMES[asp]
+        sym = ASPECT_SYMS[asp]
+
+        # moiety: the effective orb is the MEAN of both bodies' full
+        # orbs; the aspect counts only if that mean covers deviation.
+        allowance = orb_allowance(active_name, passive_name)
+        if orb > allowance:
+            continue
+
+        # flatlib _aspectProperties: determine movement
+        in_orb_active = orb <= allowance
+        if sep >= 0:
+            orb_dir = sep - asp
+        else:
+            orb_dir = sep + asp
+
+        if abs(orb_dir) < MAX_EXACT_ORB:
+            movement = 'exact'
+        elif orb_dir > 0:
+            movement = 'applicative'
+        else:
+            movement = 'separative'
+
+        results.append({
+            'asp': asp, 'name': name, 'sym': sym,
+            'orb': orb, 'movement': movement,
+            'in_orb_active': in_orb_active,
+            'sep': sep, 'abs_sep': abs_sep
+        })
+
+    return results
+
+
+def check_aspect_with_speed(active_lon, active_name, active_speed,
+                            passive_lon, passive_name, passive_speed):
+    """Full aspect check with actual planet speeds for correct movement detection."""
+    sep = closest_distance(active_lon, passive_lon)
+    abs_sep = abs(sep)
+    
+    # Active = faster body
+    if abs(active_speed) >= abs(passive_speed):
+        faster_lon, faster_name, faster_spd = active_lon, active_name, active_speed
+        slower_lon, slower_name, slower_spd = passive_lon, passive_name, passive_speed
+        is_active_faster = True
+    else:
+        faster_lon, faster_name, faster_spd = passive_lon, passive_name, passive_speed
+        slower_lon, slower_name, slower_spd = active_lon, active_name, active_speed
+        is_active_faster = False
+    
+    # Recalculate sep with faster as first arg
+    if is_active_faster:
+        sep = closest_distance(active_lon, passive_lon)
+    else:
+        sep = closest_distance(passive_lon, active_lon)
+    abs_sep = abs(sep)
+    
+    results = []
+    for asp in MAJOR_ASPECTS:
+        orb = abs(abs_sep - asp)
+        name = ASPECT_NAMES[asp]
+        sym = ASPECT_SYMS[asp]
+        
+        allowance = orb_allowance(active_name, passive_name)
+        
+        if orb > allowance:
+            continue
+        
+        in_orb_active = orb <= allowance
+        
+        if sep >= 0:
+            orb_dir = sep - asp
+        else:
+            orb_dir = sep + asp
+        
+        if abs(orb_dir) < MAX_EXACT_ORB:
+            movement = 'exact'
+        else:
+            movement = 'separative'
+            # Active (faster) planet is applicative if moving toward the aspect
+            if (orb_dir > 0 and faster_spd > 0) or (orb_dir < 0 and faster_spd < 0):
+                movement = 'applicative'
+        
+        results.append({
+            'asp': asp, 'name': name, 'sym': sym,
+            'orb': orb, 'movement': movement,
+            'in_orb_active': in_orb_active
+        })
+    
+    return results
+
+
+# ── Moon VOC (flatlib isVOC logic) ───────────────────────────────
+
+def moon_voc_status(jd, trad7_positions=None):
+    """Check if Moon is VOC at given JD using flatlib isVOC() logic.
+    
+    Returns (is_voc: bool, last_blocking: dict or None)
+    last_blocking = {'planet': str, 'aspect': str, 'orb': float, 'movement': str}
+    """
+    if trad7_positions is None:
+        trad7_positions = all_positions(jd, TRAD7)
+    
+    m_lon = trad7_positions['Moon']['lon']
+    m_spd = trad7_positions['Moon']['speed']
+    
+    for planet in TRAD7:
+        if planet == 'Moon':
+            continue
+        p_lon = trad7_positions[planet]['lon']
+        p_spd = trad7_positions[planet]['speed']
+        
+        aspects = check_aspect_with_speed(
+            m_lon, 'Moon', m_spd,
+            p_lon, planet, p_spd
+        )
+        
+        for asp in aspects:
+            if not asp['in_orb_active']:
+                continue  # flatlib: only count active planet's inOrb
+            if asp['movement'] in ('applicative', 'exact'):
+                return False, {
+                    'planet': planet,
+                    'aspect': asp['name'],
+                    'sym': asp['sym'],
+                    'orb': asp['orb'],
+                    'movement': asp['movement']
+                }
+    
+    return True, None
+
+
+# ── Helper formatting ────────────────────────────────────────────
+
+def fmt_lon(lon):
+    """Format longitude as '♑6.95°'."""
+    si = int(lon // 30) % 12
+    return f"{SIGNS_SHORT[si]}{lon % 30:.2f}°"
+
+def fmt_lon_full(lon):
+    """Format longitude as '♑Capricorn 6.95°'."""
+    si = int(lon // 30) % 12
+    return f"{SIGNS[si]} {lon % 30:.2f}°"
+
+def sign_index(lon):
+    return int(lon // 30) % 12
+
+
+# ── Rulership & dignity ──────────────────────────────────────────
+
+RULER_MAP = {0: 'Mars', 1: 'Venus', 2: 'Mercury', 3: 'Moon', 4: 'Sun',
+             5: 'Mercury', 6: 'Venus', 7: 'Mars', 8: 'Jupiter',
+             9: 'Saturn', 10: 'Saturn', 11: 'Jupiter'}
+
+# Exaltation / fall / detriment by sign index (fall = opposite of exaltation,
+# detriment = opposite of rulership)
+EXALT = {0: 'Sun', 1: 'Moon', 5: 'Mercury', 9: 'Mars', 3: 'Jupiter',
+         11: 'Venus', 6: 'Saturn'}
+FALL = {6: 'Sun', 7: 'Moon', 11: 'Mercury', 3: 'Mars', 9: 'Jupiter',
+        5: 'Venus', 0: 'Saturn'}
+DET = {6: 'Mars', 7: 'Venus', 8: 'Mercury', 9: 'Moon', 10: 'Sun',
+       11: 'Mercury', 0: 'Venus', 1: 'Mars', 2: 'Jupiter', 3: 'Saturn',
+       4: 'Saturn', 5: 'Jupiter'}
+
+SIGN_TYPE = {
+    0: ("Chara (movable)", "situation will change — matter is active"),
+    3: ("Chara (movable)", "situation will change — matter is active"),
+    6: ("Chara (movable)", "situation will change — matter is active"),
+    9: ("Chara (movable)", "situation will change — matter is active"),
+    1: ("Sthira (fixed)", "situation stays as-is — matter stuck"),
+    4: ("Sthira (fixed)", "situation stays as-is — matter stuck"),
+    7: ("Sthira (fixed)", "situation stays as-is — matter stuck"),
+    10: ("Sthira (fixed)", "situation stays as-is — matter stuck"),
+    2: ("Dwisvabhava (dual)", "changes with difficulty — slow shift"),
+    5: ("Dwisvabhava (dual)", "changes with difficulty — slow shift"),
+    8: ("Dwisvabhava (dual)", "changes with difficulty — slow shift"),
+    11: ("Dwisvabhava (dual)", "changes with difficulty — slow shift"),
+}
+
+
+def ruler_of(sign):
+    """Ruler planet name for a sign index (0-11)."""
+    return RULER_MAP[sign]
+
+
+def dignity(planet_name, lon):
+    """Essential dignity for a planet at longitude.
+
+    Returns (score, label): Rulership +5, Exaltation +4, Fall −4,
+    Detriment −5, else Peregrine 0.
+    """
+    si = sign_index(lon)
+    if RULER_MAP[si] == planet_name:
+        return 5, "Rulership"
+    if EXALT.get(si) == planet_name:
+        return 4, "Exaltation"
+    if FALL.get(si) == planet_name:
+        return -4, "Fall"
+    if DET.get(si) == planet_name:
+        return -5, "Detriment"
+    return 0, "Peregrine"
+
+
+def avastha(label):
+    """Vedic avastha from a dignity label."""
+    if label in ("Rulership", "Exaltation"):
+        return "Deeptha (illuminated) ✅"
+    if label == "Fall":
+        return "Deena (wretched) ❌"
+    if label == "Detriment":
+        return "Mushita (loss) ❌"
+    return "neutral"
+
+
+def sign_type(sign):
+    """(name, meaning) for the ASC sign type."""
+    return SIGN_TYPE[sign]
+
+
+# ── Quesited house mapping (Thai first, then English) ────────────
+
+# Thai tone marks (mai ek / tho / tri / chattawa). As-typed Thai input
+# frequently misplaces tone marks (e.g. phoen with a doubled mai ek
+# instead of mai tho, or ban with mai ek instead of mai tho), so both
+# the question and the keywords are stripped of tone marks before
+# matching. Vowel/consonant-swap typos are not covered by
+# normalization and are kept as explicit variants below.
+_THAI_TONE_MARKS = str.maketrans({
+    "\u0e48": "",  # mai ek ่
+    "\u0e49": "",  # mai tho ้
+    "\u0e4a": "",  # mai tri ๊
+    "\u0e4b": "",  # mai chattawa ๋
+})
+
+def _normalize_thai(s):
+    return s.translate(_THAI_TONE_MARKS)
+
+THAI_MAPPINGS = [
+    ('แฟน', 7),
+    ('คู่', 7),
+    ('ตแ่งงาน', 7),
+    ('แต่งงาน', 7),
+    ('สัญยา', 7),
+    ('สััญญา', 7),
+    ('ทำงาน', 6),
+    ('งาน', 6),
+    ('เสร็จ', 6),
+    ('สุขภาพ', 6),
+    ('สขภาพ', 6),
+    ('ปว่ย', 6),
+    ('เงิน', 2),
+    ('หาย', 2),
+    ('มือถือ', 2),
+    ('มือถื', 2),
+    ('มืือถืือ', 2),
+    ('กระเป๋าสตางค์', 2),
+    ('กระเป๋าสตางค', 2),
+    ('กุญแจ', 2),
+    ('ความรัก', 5),
+    ('ครอบครวู้', 5),
+    ('ครอบครั', 5),
+    ('สด', 5),
+    ('tiktok', 5),
+    ('youtube', 5),
+    ('วิดีโอ', 5),
+    ('วดีโอ', 5),
+    ('เนื้อหา', 5),
+    ('บาน', 4),
+    ('ฝน', 4),
+    ('อากาศ', 4),
+    ('พายุ', 4),
+    ('พายุน', 4),
+    ('การเดินทาง', 9),
+    ('การเดิินทาง', 9),
+    ('รียน', 9),
+    ('เรียน', 9),
+    ('สอบ', 9),
+    ('กฎำหมาย', 9),
+    ('กฎหมาย', 9),
+    ('ศาล', 9),
+    ('เพื้อน', 11),
+]
+ENGLISH_MAPPINGS = [
+    (["lost", "missing", "phone", "wallet", "key", "bag", "item"], 2),
+    (["sibling", "brother", "sister"], 3),
+    (["money", "price", "gold", "buy", "sell", "invest", "stock", "pay", "bill"], 2),
+    (["job", "career", "promote", "boss", "work"], 10),
+    (["home", "move", "land", "house", "property"], 4),
+    (["rain", "weather", "storm", "flood", "cloud", "thunder"], 4),
+    (["travel", "trip", "visit", "fly"], 9),
+    (["study", "exam", "education", "learn"], 9),
+    (["health", "sick", "doctor", "hospital", "disease"], 6),
+    (["friend", "social", "group", "party"], 11),
+    (["family", "parent", "father", "mother", "son", "child"], 5),
+    (["legal", "law", "court", "case", "lawyer", "sue"], 9),
+    (["contract", "deal", "agreement"], 7),
+    (["live", "tiktok", "stream", "youtube", "clip", "video", "content", "shoot", "edit", "record"], 5),
+    (["love", "partner", "relationship", "boyfriend", "girlfriend", "marry", "dating", "ex", "come back", "return"], 7),
+]
+
+
+def quesited_house(question):
+    """Map a question string to the quesited house (default 7 = partner).
+
+    Returns (house, matched_term_or_None). Thai keywords checked first,
+    then English (first match wins).
+    """
+    q_norm = _normalize_thai(question)
+    q_lower = question.lower()
+    for term, h in THAI_MAPPINGS:
+        if _normalize_thai(term) in q_norm:
+            return h, term
+    for kws, h in ENGLISH_MAPPINGS:
+        for k in kws:
+            if k in q_lower:
+                return h, k
+    return 7, None
+
+
+# ── Exact aspect timing (Newton-refined) ─────────────────────────
+#
+# ⚠️ SIGN CONVENTION: closest_distance(a, b) returns the arc b−a wrapped to
+# ±180°. When solving m(t) = p(t) + sgn*A (mod 360), the deviation must be
+# ((m − p − sgn*A + 180) % 360) − 180. Feeding closest_distance(m, p) in
+# directly flips the sign for sextile/trine/square/opposition and the
+# iteration diverges; conjunctions are unaffected (sign cancels at A=0).
+
+def _aspect_time(jd, pos, a_name, b_name, A, sgn, max_days):
+    """Newton-refine the time when a applies to b at aspect angle A.
+
+    Solves a(t) = b(t) + sgn*A (mod 360). Returns hours-from-jd or None if
+    outside [−0.01, max_days*24] or the iteration diverges.
+    """
+    a0 = pos[a_name]['lon']; as_ = pos[a_name]['speed']
+    b0 = pos[b_name]['lon']; bs = pos[b_name]['speed']
+    rel = as_ - bs
+    if abs(rel) < 1e-6:
+        return None
+    t = ((b0 + sgn * A - a0) % 360) / rel  # days
+    for _ in range(5):
+        tjd = jd + t
+        a, _ = swe.calc_ut(tjd, ALL_BODY_CODES[a_name], FLAGS)
+        b, _ = swe.calc_ut(tjd, ALL_BODY_CODES[b_name], FLAGS)
+        dev = ((a[0] - b[0] - sgn * A + 180) % 360) - 180
+        t -= dev / rel
+        if abs(dev) < 1e-4:
+            break
+    th = t * 24
+    if -0.01 <= th <= max_days * 24:
+        return th
+    return None
+
+
+def moon_aspect_times(jd, pos, max_hours=72):
+    """Next exact Moon aspects to each Trad7 planet within max_hours.
+
+    Returns sorted list of (hours, aspect_angle, planet_name).
+    """
+    found = {}
+    for pname in TRAD7:
+        if pname == 'Moon':
+            continue
+        for A in (0, 60, 90, 120, 180):
+            for sgn in ((1,) if A == 0 else (1, -1)):
+                th = _aspect_time(jd, pos, 'Moon', pname, A, sgn, max_hours / 24)
+                if th is not None:
+                    key = (pname, A)
+                    if key not in found or th < found[key]:
+                        found[key] = th
+    return sorted((th, A, pname) for (pname, A), th in found.items())
+
+
+# ── Translation & Collection of light ────────────────────────────
+
+def _applying_to(pos, a_name, b_name, good_aspects=(0, 60, 120)):
+    """True if a is applying/exact to b on a harmonious major aspect."""
+    chk = check_aspect_with_speed(
+        pos[a_name]['lon'], a_name, pos[a_name]['speed'],
+        pos[b_name]['lon'], b_name, pos[b_name]['speed'])
+    return any(c['movement'] in ('applicative', 'exact') and c['asp'] in good_aspects
+               for c in chk)
+
+
+def translation_of_light(jd, pos, a_name, b_name):
+    """True if the Moon translates light between a and b
+    (Moon applying to both, harmonious aspects)."""
+    return (_applying_to(pos, 'Moon', a_name)
+            and _applying_to(pos, 'Moon', b_name))
+
+
+def collection_of_light(jd, pos, a_name, b_name):
+    """List of third planets both a and b apply to (any major aspect)."""
+    third = []
+    for t in TRAD7:
+        if t in (a_name, b_name, 'Moon'):
+            continue
+        if (_applying_to(pos, a_name, t, good_aspects=tuple(MAJOR_ASPECTS))
+                and _applying_to(pos, b_name, t, good_aspects=tuple(MAJOR_ASPECTS))):
+            third.append(t)
+    return third

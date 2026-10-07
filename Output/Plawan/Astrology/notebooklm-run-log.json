@@ -1,0 +1,16 @@
+{
+  "dk-in-8th-house-finding-soulmate": {
+    "title": "DK in the 8th House: How the Soulmate is Found",
+    "questionsJson": "20260731-dk-in-8th-house-finding-soulmate-questions.json",
+    "resultsFile": "20260801-dk-in-8th-house-finding-soulmate-notebooklm-results.md",
+    "conversationId": "44a94577-11ba-4317-ae57-c6eedf6b12a6",
+    "runAt": "2026-08-01T03:25:56.006Z"
+  },
+  "relationship-good-or-bad": {
+    "title": "How to Know if a Relationship Is Good or Bad",
+    "questionsJson": "20260801-relationship-good-or-bad-questions.json",
+    "resultsFile": "20260801-relationship-good-or-bad-notebooklm-results.md",
+    "conversationId": "44a94577-11ba-4317-ae57-c6eedf6b12a6",
+    "runAt": "2026-08-01T04:03:22.924Z"
+  }
+}

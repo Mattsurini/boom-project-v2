@@ -1,0 +1,54 @@
+{
+  "title": "Basic Western Astrology: Does the Foundational Framework Actually Predict?",
+  "slug": "basic-western-astrology",
+  "contextNoteTitle": "Context: Basic Western Astrology — Foundational Framework Research",
+  "contextNote": "You are a research analyst with mastery of Western (tropical) astrology — its signs, houses, planets, aspects, and angles — plus a critical, evidence-first mindset grounded in psychology and the philosophy of science. You are helping test the hypothesis: \"The basic Western astrology framework (signs × houses × planets × aspects × angles) is internally coherent as a descriptive-behavioral system but only weakly testable at the event level. It describes temperament, motives, and relational style reasonably well, but over-claims when it predicts specific events, timing, or other people's behavior.\"\n\nWhile answering, keep in mind: (1) Separate DESCRIPTIVE ARCHETYPE (trait/behavioral language — plausible) from DETERMINISTIC FORECAST (events/dates/others' behavior — unfalsifiable); never conflate the two. (2) Ground every answer in the sources provided — the local PDF \"Western Astrology — Planets in Signs and Houses\" is the primary local text, and the imported Western sources are your reference corpus. If a claim is NOT in the sources, say \"NOT IN SOURCES\" explicitly rather than inventing it. (3) When testing internal consistency, quote the source's own phrasing and count reinforcing vs. contradictory cases. (4) Flag every hedged, self-validating phrase (\"tends to\", \"inclines to\", \"may\") as a Barnum-risk marker. (5) You are encouraged to flag weaknesses in the astrological premise itself.",
+  "questions": [
+    {
+      "id": "Q1",
+      "phase": "Phase 1 — Establishing the Technical Baseline",
+      "prompt": "From the source \"Western Astrology — Planets in Signs and Houses\" (the local PDF): lay out the exact lexicon for the 12 signs (element, mode, core keyword) and for the 10 planets in each sign. Where do the trait descriptions repeat or reinforce each other across placements, and where do they contradict? Quote the source's own phrasing."
+    },
+    {
+      "id": "Q2",
+      "phase": "Phase 1 — Establishing the Technical Baseline",
+      "prompt": "What does the source say about the 12 HOUSES — what is each house's domain (1st outward character, 5th romance-not-marriage, 7th partnerships, 10th career), and how does each planet-in-house description \"give the traits of\" its ruling sign? Which houses get the strongest, most consistent treatment and which are thin?"
+    },
+    {
+      "id": "Q3",
+      "phase": "Phase 1 — Establishing the Technical Baseline",
+      "prompt": "How does the source handle the ANGLES, RULERSHIPS, and DIGNITY — does it define the Ascendant/MC, the planets' sign rulerships, and essential dignity (domicile/exaltation/detriment/fall)? What does it say about ASPECTS (it mostly tags \"stressful aspects\")? Which of these foundational topics are well-covered vs. [NOT IN DB] vs. only present in the imported notebook sources?"
+    },
+    {
+      "id": "Q4",
+      "phase": "Phase 2 — Testing the Hypothesis",
+      "prompt": "Test internal consistency: across the planet-in-sign and planet-in-house readings in the source, how often do placements agree with their elemental/modal/rulership logic (e.g., fire signs = action, Saturn = caution/security, planet-in-house = ruling-sign traits)? Count the reinforcing vs. contradictory cases and quote them."
+    },
+    {
+      "id": "Q5",
+      "phase": "Phase 2 — Testing the Hypothesis",
+      "prompt": "Test the predictive leverage claim: when the source makes a specific behavioral or event prediction (marriage timing via Saturn-in-7th, \"wife dies\" via Mars-in-4th, career outcome, longevity), is that prediction derived from a testable rule or from hedged archetypal language? Separate the \"rule-based\" claims from the \"archetypal narrative\" claims and quantify the split."
+    },
+    {
+      "id": "Q6",
+      "phase": "Phase 2 — Testing the Hypothesis",
+      "prompt": "Does the framework converge with psychology? Map the chart-language (planet/sign/house trait descriptions) onto established personality constructs (Big Five: openness/conscientiousness/extraversion/agreeableness/neuroticism; or attachment styles) — which placements map cleanly, which map to nothing, and which read as pure Barnum-style subjective validation?"
+    },
+    {
+      "id": "Q7",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: Is basic Western astrology's core framework internally coherent enough to be called a \"system,\" or is it a loose lexicon where any trait can be justified by selecting among signs/houses/aspects? Apply a strong consistency test to the source's own claims."
+    },
+    {
+      "id": "Q8",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: What is the strongest psychological evidence that the framework's accuracy is an artifact of the Barnum/Forer effect, confirmation bias, and subjective validation — and where (if anywhere) does the chart language survive those critiques? Cite the imported psychology sources where present."
+    },
+    {
+      "id": "Q9",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: Where exactly is the reliability boundary? Which basic-Western claims are (a) falsifiable and surviving, (b) falsifiable and failed, (c) unfalsifiable? What would a minimal, honest \"user manual\" for basic Western astrology say about what it can and cannot predict — and which of the local source's own claims would it have to retract?"
+    }
+  ],
+  "blindSpot": "Given only the sources provided, list everything that is MISSING that would be critical to proving whether the basic Western astrology framework (signs × houses × planets × aspects × angles) is internally coherent and where its reliability boundary lies. Focus on: (1) a proper ASPECTS and DIGNITY doctrine — the local source barely covers aspects, so the framework's geometry is incomplete without Ebertin-style aspect/midpoint material; (2) an empirical/validation dataset — trait-rating or event-outcome studies that test the placements, without which internal consistency is only anecdote; (3) the psychological literature (Barnum/Forer, confirmation bias, subjective validation, trait theory) that refutes or limits the trait-claim; (4) the imported notebook's Western sources (synastry, composite, timing) — are they in the notebook but not yet filed locally, and what do they add beyond the basics?; and (5) the distinction between descriptive archetype (temperament/relational style) and deterministic forecast (events/dates/others' behavior). For each gap, say exactly what evidence or source is needed to close it."
+}

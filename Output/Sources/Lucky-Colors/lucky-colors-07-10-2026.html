@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<style>
+  .wrap { font-size: 14px; color: var(--foreground); line-height: 1.5; }
+  h3 { margin: 0 0 2px; font-size: 15px; font-weight: 600; }
+  .sub { color: var(--muted-foreground); font-size: 12.5px; margin-bottom: 12px; }
+  table { border-collapse: collapse; }
+  th, td { text-align: left; padding: 6px 12px 6px 0; vertical-align: middle; white-space: nowrap; }
+  th { color: var(--muted-foreground); font-weight: 600; font-size: 12px;
+       border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+  tbody tr + tr td { border-top: 1px solid var(--border); }
+  td.b { font-weight: 600; }
+  .chip { display: inline-flex; align-items: center; gap: 5px; margin-right: 10px; }
+  .dot { width: 13px; height: 13px; border-radius: 50%;
+         border: 1px solid rgba(128,128,128,.45); flex: none; }
+  .avoid .dot { opacity: .55; }
+  .avoid { color: var(--muted-foreground); }
+  .day-level { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border);
+               font-size: 12.5px; color: var(--muted-foreground); }
+  .day-level b { color: var(--foreground); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h3>สีเสื้อมงคลเด่น — 7 ต.ค. 2026 (วันพุธ · ดาวพุธ)</h3>
+  <div class="sub">แยกตามวันเกิด · ตำราทักษา (สำนักหอคอยขนนก)</div>
+
+  <table>
+    <thead>
+      <tr><th>เกิดวัน</th><th>สีมงคลเด่น</th><th>สีที่ควรเลี่ยง</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="b">อาทิตย์</td>
+        <td><span class="chip"><i class="dot" style="background:#808080"></i>เทา</span><span class="chip"><i class="dot" style="background:#1a1a1a"></i>ดำ</span><span class="chip"><i class="dot" style="background:#8b5a2b"></i>น้ำตาล</span></td>
+        <td class="avoid"><span class="chip"><i class="dot" style="background:#4fc3f7"></i>ฟ้า</span><span class="chip"><i class="dot" style="background:#1a3a8f"></i>น้ำเงิน</span></td>
+      </tr>
+      <tr>
+        <td class="b">จันทร์</td>
+        <td><span class="chip"><i class="dot" style="background:#ff8c00"></i>ส้ม</span><span class="chip"><i class="dot" style="background:#ff4500"></i>แสด</span></td>
+        <td class="avoid"><span class="chip"><i class="dot" style="background:#d32f2f"></i>แดง</span></td>
+      </tr>
+      <tr>
+        <td class="b">อังคาร</td>
+        <td><span class="chip"><i class="dot" style="background:#ff8c00"></i>ส้ม</span><span class="chip"><i class="dot" style="background:#ff4500"></i>แสด</span></td>
+        <td class="avoid"><span class="chip"><i class="dot" style="background:#ffd700"></i>เหลือง</span><span class="chip"><i class="dot" style="background:#ffffff"></i>ขาว</span><span class="chip"><i class="dot" style="background:#fff8dc"></i>ครีม</span></td>
+      </tr>
+      <tr>
+        <td class="b">พุธ (กลางวัน)</td>
+        <td><span class="chip"><i class="dot" style="background:#ff8c00"></i>ส้ม</span><span class="chip"><i class="dot" style="background:#ff4500"></i>แสด</span></td>
+        <td class="avoid"><span class="chip"><i class="dot" style="background:#ff69b4"></i>ชมพู</span></td>
+      </tr>
+      <tr>
+        <td class="b">พุธ (หลัง 18:00)</td>
+        <td><span class="chip"><i class="dot" style="background:#ffd700"></i>เหลือง</span><span class="chip"><i class="dot" style="background:#ffffff"></i>ขาว</span><span class="chip"><i class="dot" style="background:#fff8dc"></i>ครีม</span></td>
+        <td class="avoid"><span class="chip"><i class="dot" style="background:#ff8c00"></i>ส้ม</span><span class="chip"><i class="dot" style="background:#ff4500"></i>แสด</span></td>
+      </tr>
+      <tr>
+        <td class="b">พฤหัสบดี</td>
+        <td><span class="chip"><i class="dot" style="background:#4fc3f7"></i>ฟ้า</span><span class="chip"><i class="dot" style="background:#1a3a8f"></i>น้ำเงิน</span></td>
+        <td class="avoid"><span class="chip"><i class="dot" style="background:#6a0dad"></i>ม่วง</span></td>
+      </tr>
+      <tr>
+        <td class="b">ศุกร์</td>
+        <td><span class="chip"><i class="dot" style="background:#ff8c00"></i>ส้ม</span><span class="chip"><i class="dot" style="background:#ff4500"></i>แสด</span></td>
+        <td class="avoid"><span class="chip"><i class="dot" style="background:#808080"></i>เทา</span><span class="chip"><i class="dot" style="background:#1a1a1a"></i>ดำ</span><span class="chip"><i class="dot" style="background:#8b5a2b"></i>น้ำตาล</span></td>
+      </tr>
+      <tr>
+        <td class="b">เสาร์</td>
+        <td><span class="chip"><i class="dot" style="background:#808080"></i>เทา</span><span class="chip"><i class="dot" style="background:#1a1a1a"></i>ดำ</span><span class="chip"><i class="dot" style="background:#8b5a2b"></i>น้ำตาล</span></td>
+        <td class="avoid"><span class="chip"><i class="dot" style="background:#2e8b57"></i>เขียว</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="day-level">
+    <b>สีประจำวันพุธ (ใช้ได้กับทุกคนในวันนี้):</b>
+    งาน ส้ม/แสด · เงิน–โชคลาภ เทา/ดำ/น้ำตาล · ผู้ใหญ่เมตตา เหลือง/ขาว/ครีม · <b>เลี่ยง ชมพู</b>
+  </div>
+</div>
+</body>
+</html>

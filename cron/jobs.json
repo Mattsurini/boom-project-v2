@@ -1,0 +1,97 @@
+{
+  "jobs": [
+    {
+      "id": "d9ce1fadfd6d",
+      "name": "morning-transit-briefing",
+      "prompt": "Generate daily transit summary for today using scripts/transit_timeline_v2.py and save to Output/transits/daily_YYYYMMDD.md",
+      "skills": [
+        "morning-transit-briefing"
+      ],
+      "skill": "morning-transit-briefing",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "nvidia",
+      "model_snapshot": "nvidia/nemotron-3-super-120b-a12b",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "display": "0 7 * * *"
+      },
+      "schedule_display": "0 7 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-05T20:58:34.541266+07:00",
+      "next_run_at": "2026-09-06T07:00:00+07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": "E:\\Boom Project"
+    },
+    {
+      "id": "4be12c29a356",
+      "name": "transit-pac-pipeline",
+      "prompt": "Generate PAC content from today's transits using transit-pac-pipeline and save to Output/PAC/",
+      "skills": [
+        "transit-pac-pipeline"
+      ],
+      "skill": "transit-pac-pipeline",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "nvidia",
+      "model_snapshot": "nvidia/nemotron-3-super-120b-a12b",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "display": "0 10 * * *"
+      },
+      "schedule_display": "0 10 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-05T20:59:01.746769+07:00",
+      "next_run_at": "2026-09-06T10:00:00+07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": "E:\\Boom Project"
+    }
+  ],
+  "updated_at": "2026-09-05T20:59:02.260562+07:00"
+}

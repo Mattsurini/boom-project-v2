@@ -1,0 +1,20 @@
+{
+  "topic": "หลักการอ่านดวง Transit",
+  "phase_1_establishing_facts": [
+    "Transit/Gochara ควรนับจากอะไร: natal planet, natal house, Moon sign, Lagna, หรือ local chart?",
+    "House/Bhava span สำคัญต่อการอ่าน transit อย่างไร?",
+    "มุมดาว/aspect ควรถูกใช้เป็น trigger หรือเป็นคำทำนายสำเร็จรูป?",
+    "ดาวเร็ว vs ดาวช้า ให้ weight ต่างกันอย่างไร?"
+  ],
+  "phase_2_testing_hypothesis": [
+    "สมมติฐาน: transit ที่ดีต้องอ่านเป็นลำดับ hierarchy — planet nature → natal promise → house impacted → aspect/orb → timing trigger. Source สนับสนุนไหม?",
+    "Gochara จาก Jyotish ช่วยกันความผิดพลาดของ Western transit ได้ตรงไหน?",
+    "ถ้า transit event ดีแต่ natal promise/house ไม่รองรับ ควรแปลอย่างไร?"
+  ],
+  "phase_3_adversarial_check": [
+    "ข้อโต้แย้งแรงสุดต่อการอ่าน transit คืออะไร?",
+    "จุดไหนที่มักทำให้หมอดู overclaim หรือ fearmonger?",
+    "อะไรที่ยังต้องใช้ calculation เฉพาะ chart ก่อนพูดได้?"
+  ],
+  "blind_spot_sweep": "Review all provided sources and identify what critical information is MISSING that would be necessary to either prove or disprove the core hypothesis. List specific gaps."
+}

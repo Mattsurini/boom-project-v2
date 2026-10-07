@@ -1,0 +1,59 @@
+{
+  "title": "Nakshatra for Financial Astrology",
+  "slug": "nakshatra-financial-astrology",
+  "contextNoteTitle": "Context: Nakshatra as a Financial Timing Layer",
+  "contextNote": "You are a research analyst with mastery of classical Vedic Jyotisha (Brihat Parashara Hora Sastra, Brihat Jataka, Saravali, Phaladeepika, Jataka Parijata) and Nakshatra / lunar-mansion theory, plus a critical, evidence-first mindset toward financial astrology. You are testing the hypothesis: \"Nakshatra transits (the 27-lunar-mansion layer, 13 deg 20 min each, 4 padas of 3 deg 20 min) provide a finer, faster-shifting timing signal for financial-market mood than Rashi (30 deg) transits alone — but only when the transiting planet, the Nakshatra lord, and the Rashi lord are read together as a three-layer stack.\"\n\nWhile answering, keep in mind: (1) Nakshatras are fixed star-fields (speed = zero); planets move through them, so a planet's market expression changes when it changes Nakshatra. (2) Each Nakshatra carries a behavioral-finance theme (Rohini = growth/profit, Ardra = volatility, Punarvasu = recovery/retest, Pushya = stable accumulation, Ashlesha = traps/confusion, Ashwini = fast starts, Krittika = sharp cuts, Magha = institutional authority, Purva Phalguni = speculation, Uttara Phalguni = contracts/planning). (3) The 9-lord cycle is Ketu, Venus, Sun, Moon, Mars, Rahu, Jupiter, Saturn, Mercury — each ruling 3 Nakshatras. (4) NEVER treat Nakshatra alone as a signal: combine with Rashi lord, planetary strength, combustion/retrograde, Moon condition, and market context; Nakshatra is a supporting timing layer, not a buy/sell system. (5) The classics give the Nakshatra structure but are largely silent on financial use — if a claim is NOT in the sources, say \"NOT IN SOURCES\" explicitly rather than inventing it, and flag it [NOT IN DB]. (6) You are encouraged to challenge the premise: post-hoc pattern-matching on a ~2.3-day Moon window is always possible, so distinguish a DERIVED mapping from a VALIDATED one.",
+  "questions": [
+    {
+      "id": "Q1",
+      "phase": "Phase 1 — Establishing the Technical Baseline",
+      "prompt": "In the uploaded sources, what exactly is a Nakshatra, how is the 360-degree zodiac divided (27 x 13 deg 20 min, 4 padas of 3 deg 20 min each, 108 padas total, 9 padas per sign), and why is the Nakshatra layer finer than the Rashi layer for timing market change? Cite the degree math and the 'fixed star-field, planets move through it' logic."
+    },
+    {
+      "id": "Q2",
+      "phase": "Phase 1 — Establishing the Technical Baseline",
+      "prompt": "How are Nakshatra lords assigned via the 9-planet cycle (Ketu to Mercury, 3 Nakshatras per planet), and what do the Chatushpad, Dvipad, and Tripad pada distributions across signs mean for a Nakshatra's financial behavior? Which Nakshatras split across two signs and which are fully in one sign?"
+    },
+    {
+      "id": "Q3",
+      "phase": "Phase 1 — Establishing the Technical Baseline",
+      "prompt": "Why must the transiting planet, the Nakshatra lord, and the Rashi lord be read together as a three-layer stack? When the Nakshatra lord and the Rashi lord conflict, which layer should dominate the market-mood interpretation?"
+    },
+    {
+      "id": "Q4",
+      "phase": "Phase 2 — Testing the Hypothesis",
+      "prompt": "For the Nakshatras the source discusses in detail (Ashwini through Uttara Phalguni), extract the stated financial theme for each (e.g., Rohini = growth/profit, Ardra = volatility, Punarvasu = recovery, Pushya = disciplined wealth-building, Ashlesha = traps/confusion, Magha = authority/institutional pressure, Purva Phalguni = speculation/luxury, Uttara Phalguni = contracts/planning). List any Nakshatra the source explicitly marks as 'not 100% good or 100% bad.'"
+    },
+    {
+      "id": "Q5",
+      "phase": "Phase 2 — Testing the Hypothesis",
+      "prompt": "For the market planets (Moon = crowd mood, ~2.3 days per Nakshatra; Mercury = news and information; Mars = momentum and panic; Venus = risk appetite; Jupiter = expansion and banking; Saturn = fear and structure; Rahu/Ketu = disruption), how does the source map each planet's financial nature onto the Nakshatra themes? Which planet x Nakshatra combinations are the highest-signal?"
+    },
+    {
+      "id": "Q6",
+      "phase": "Phase 2 — Testing the Hypothesis",
+      "prompt": "Does the source give a usable timing procedure — track which Nakshatra each planet transits, log the Nakshatra lord and the Rashi lord, compare whether they are supportive or conflicting — and does it explicitly warn NOT to use Nakshatra alone? Extract the exact do/do-not protocol."
+    },
+    {
+      "id": "Q7",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: What is the strongest case that Nakshatra-based market timing is unfalsifiable — that post-hoc pattern-matching on a ~2.3-day Moon window will always find 'resonance' after the fact? Where does the source itself admit Nakshatra is a supporting layer, not a system, and what validation evidence is missing?"
+    },
+    {
+      "id": "Q8",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: If the 27-Nakshatra financial signature table were to be validated, what exact evidence would be required (a chart x market-outcome dataset with known market dates, a backtest rule, a hypothesis fixed before looking at data)? Is anything in the uploaded sources real validation, or only derivation?"
+    },
+    {
+      "id": "Q9",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: Which market-behavioral constructs (collective mood, sentiment, herding, risk appetite) does the Moon/Nakshatra logic actually map onto in behavioral-finance terms — and where does the astrological claim exceed what psychology can support? [NOTE: behavioral-finance literature is NOT in the local Psychology-Database; external grounding is a cross-check lead, not proof.]"
+    },
+    {
+      "id": "Q10",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: Where do the local Rashi-based and Nakshatra-based verdicts diverge, and which classical texts (BPHS lunar-constellation chapter, Saravali Nakshatra chapters, the Significance-of-nakshatras article) support versus contradict the financial gloss? What do the classics say that the transcript omits?"
+    }
+  ],
+  "blindSpot": "Given ONLY the uploaded sources, list everything that is MISSING that would be critical to proving whether Nakshatra transits can reliably time or classify financial-market mood. Focus on: (1) a real chart x market-outcome dataset with known market dates and simultaneous Nakshatra positions — without one the signature table is untested; (2) the classical Nakshatra-phala texts (BPHS lunar-constellation chapter, Saravali, Jataka Parijata) and whether they support any financial use or only natal/character use; (3) behavioral-finance and market-psychology literature on collective market mood that would ground or refute the 'market mood' claim; (4) modern financial-astrology systems (e.g., W.D. Gann cycles) not present in the sources; and (5) the difference between a DERIVED mapping table and a VALIDATED one. For each gap, say exactly what evidence or source is needed to close it."
+}

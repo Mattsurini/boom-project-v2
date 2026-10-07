@@ -1,0 +1,22 @@
+{
+  "boom": {
+    "title": "Boom Project",
+    "root": "E:\\Boom Project",
+    "description": "BooM's astrology + research + content workspace.",
+    "mounts": {
+      "knowledge": "Knowledge",
+      "output": "Output",
+      "scripts": "scripts",
+      "skills": "skills",
+      "wiki": "Knowledge/indexes",
+      "core": "core",
+      "registry": "cache/registry.sqlite3",
+      "backups": ".rebuild/backup"
+    },
+    "rules": [
+      "Never duplicate content across folders \u2014 reference by ID.",
+      "Stage alias folders are forbidden; use CANONICAL_STAGES.",
+      "PDFs are content-read on demand, never bulk-loaded."
+    ]
+  }
+}

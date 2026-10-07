@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { background:#0e1220; }
+  body { font-family:Inter,'Noto Sans Thai','Leelawadee UI','Tahoma',system-ui,sans-serif; }
+  .canvas {
+    width:1380px; height:1080px; position:relative; overflow:hidden;
+    background:
+      radial-gradient(1400px 800px at 85% 5%, rgba(212,169,78,.14), transparent 60%),
+      radial-gradient(1000px 700px at 10% 100%, rgba(179,53,44,.12), transparent 60%),
+      #151a2e;
+    padding:40px 44px 34px;
+    display:flex; gap:24px;
+  }
+  .col { display:flex; flex-direction:column; gap:20px; min-width:0; }
+  .col.left { flex:11; }
+  .col.right { flex:9; }
+  .cjk { font-family:'SimSun','Noto Serif CJK SC','Microsoft YaHei',serif; }
+  .header { display:flex; align-items:flex-end; justify-content:space-between; }
+  .kicker { color:#d4a94e; font-size:22px; letter-spacing:6px; margin-bottom:8px; }
+  .title { color:#f5efe0; font-size:60px; font-weight:700; line-height:1.05; }
+  .title .sub { display:block; font-size:26px; font-weight:400; color:#c9c4b4; margin-top:6px; }
+  .seal {width:120px;height:120px;background:#b3352c;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:14px;transform:rotate(-4deg);box-shadow:0 8px 24px rgba(179,53,44,.45);border:4px solid rgba(255,255,255,.25);flex-shrink:0;}
+  .seal .big { font-size:50px; line-height:1; } .seal .small { font-size:15px; margin-top:6px; letter-spacing:2px; }
+  .row { display:flex; gap:20px; }
+  .card { background:#f5efe0; border-radius:18px; padding:22px 24px; box-shadow:0 6px 18px rgba(0,0,0,.35); position:relative; }
+  .card .label { font-size:20px; color:#8a7f68; letter-spacing:2px; margin-bottom:10px; }
+  .hero { flex:1; display:flex; align-items:center; gap:26px; background:linear-gradient(135deg,#f7f1e2,#efe5cd); }
+  .hero .ganzhi { font-size:118px; line-height:1; color:#232635; font-weight:700; }
+  .hero .meta { border-left:3px solid #d4a94e; padding-left:22px; }
+  .hero .meta .zod { font-size:34px; font-weight:700; color:#232635; }
+  .hero .meta .elem { font-size:22px; color:#6b6353; margin-top:8px; }
+  .hero .meta .elem b { color:#b3352c; }
+  .lunar { flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#1d2340; }
+  .lunar .label { color:#8f96b8; } .lunar .num { font-size:72px; font-weight:700; color:#f5efe0; line-height:1; } .lunar .num span { font-size:30px; font-weight:400; color:#c9c4b4; } .lunar .note { font-size:19px; color:#8f96b8; margin-top:10px; }
+  .trio .card { flex:1; text-align:center; padding:18px 12px; }
+  .trio .cjk.big { font-size:52px; color:#232635; line-height:1.15; }
+  .trio .th { font-size:23px; font-weight:700; color:#2b2b2b; margin-top:6px; }
+  .trio .el { font-size:19px; color:#6b6353; margin-top:4px; }
+  .tag { display:inline-block; margin-top:10px; padding:4px 14px; border-radius:999px; font-size:18px; font-weight:700; }
+  .tag.gray { background:#e4dcc8; color:#5c5443; }
+  .dos { flex:7; } .dos ul { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:10px 16px; margin-top:6px; }
+  .dos li { font-size:23px; color:#2b2b2b; font-weight:600; display:flex; align-items:center; gap:10px; }
+  .dos li::before { content:"\u2713"; color:#2e7d4f; font-size:23px; font-weight:700; }
+  .chong { flex:5; display:flex; flex-direction:column; justify-content:center; background:#2a1e22; }
+  .chong .label { color:#c98f8f; } .chong .val { font-size:44px; font-weight:700; color:#f5efe0; }
+  .chong .dir { margin-top:12px; font-size:21px; color:#d8b0a0; } .chong .dir b { color:#f5efe0; font-size:26px; }
+  .colors { background:#f5efe0; } .colors .groups { display:flex; gap:18px; margin-top:4px; }
+  .cg { flex:1; } .cg .glabel { font-size:20px; font-weight:700; margin-bottom:8px; }
+  .cg .glabel .en { font-weight:400; color:#8a7f68; font-size:16px; margin-left:6px; }
+  .swatches { display:flex; gap:8px; } .sw { flex:1; text-align:center; }
+  .sw .dot { height:44px; border-radius:12px; border:2px solid rgba(0,0,0,.15); }
+  .sw .nm { font-size:17px; color:#4a4436; margin-top:6px; }
+  .logic { background:#f5efe0; padding:20px 24px; flex:1; display:flex; flex-direction:column; justify-content:center; }
+  .logicrows { display:flex; flex-direction:column; gap:10px; }
+  .lrow { display:flex; align-items:center; gap:16px; }
+  .chip { width:100px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:21px; font-weight:700; color:#fff; border:2px solid rgba(0,0,0,.12); }
+  .chip.earth { background:#8b5e34; } .chip.metal { background:#9aa0a8; } .chip.metal.on { background:#d4a94e; color:#232635; } .chip.fire { background:#d64545; } .chip.water { background:#3a6f8f; } .chip.wood { background:#4a8f5c; }
+  .rel { font-size:21px; font-weight:700; color:#5c5443; width:150px; } .cex { font-size:20px; color:#4a4436; }
+</style>
+</head>
+<body>
+<div class="canvas">
+<div class="col left">
+<div class="header">
+<div><div class="kicker">ปฏิทินจีน · 黄历</div><div class="title">พุธ 7 ตุลาคม 2569<span class="sub">2026-10-07 · จันทรคตจิณ เดือน 8 วัน 27</span></div></div>
+<div class="seal"><div class="big cjk">甲寅</div><div class="small">วันไม้หยาง</div></div>
+</div>
+<div class="row">
+<div class="card hero"><div class="ganzhi cjk">甲寅</div><div class="meta"><div class="zod">ขาล (เสือ)</div><div class="elem">กิง 寅 ไม้หยาง · 天干 甲<br><b>เหนือ</b></div></div></div>
+<div class="card lunar"><div class="label">จันทรคติจีน</div><div class="num">8 <span>/ 27</span></div><div class="note">เดือน 8 วัน 27</div></div>
+</div>
+<div class="row trio">
+<div class="card"><div class="label">ปี</div><div class="cjk big">丙午</div><div class="th">มะเมีย (ม้า)</div><div class="el">ธาตุไฟหยาง</div></div>
+<div class="card"><div class="label">เดือน</div><div class="cjk big">丁酉</div><div class="th">ระกา</div><div class="el">ธาตุไฟหยิน</div></div>
+<div class="card"><div class="label">ฤกษ์ของวัน</div><div class="th" style="font-size:26px;margin-top:2px;">วันดี</div><div class="el">黄道 · หวงเต้า</div><div class="tag gray">เหมาะเรื่่องสำคัญ</div></div>
+</div>
+</div>
+<div class="col right">
+<div class="row">
+<div class="card dos"><div class="label">ควรทำ</div><li>ไหว้บรรพบุรุษ บูชา</li><li>แต่งงาน</li><li>ตั้งหรือย้ายเตียง</li><li>เปิดร้าน เปิดกิจการ</li></div>
+<div class="card chong"><div class="label">วันชง</div><div class="val">วอก</div><div class="dir">ทิศร้าย: <b>เหนือ</b></div></div>
+</div>
+<div class="card colors"><div class="label">สีมงคล (ตามธาตุ 甲 ไม้ Wood)</div><div class="groups">
+<div class="cg"><div class="glabel">เสริม<span class="en">รับพลัง</span></div><div class="swatches"><div class="sw"><div class="dot" style="background:#2b2b33"></div><div class="nm">ดำ</div></div><div class="sw"><div class="dot" style="background:#8a9bb5"></div><div class="nm">น้ำเงิน</div></div></div></div>
+<div class="cg"><div class="glabel">เข้ากัน<span class="en">ใช้ได้เลย</span></div><div class="swatches"><div class="sw"><div class="dot" style="background:#4a8f5c"></div><div class="nm">เขียว</div></div></div></div>
+<div class="cg"><div class="glabel">ควรเลี่ยง<span class="en">ลดพลัง</span></div><div class="swatches"><div class="sw"><div class="dot" style="background:#f2f2f2"></div><div class="nm">ขาว</div></div><div class="sw"><div class="dot" style="background:#d4a94e"></div><div class="nm">ทอง</div></div><div class="sw"><div class="dot" style="background:#b8bcc4"></div><div class="nm">เงิน</div></div></div></div>
+</div></div>
+<div class="card logic"><div class="label">ธาตุของวัน: ไม้ (甲)</div><div class="logicrows">
+<div class="lrow"><div class="chip water">น้ำ</div><div class="rel">เสริม (มารดา)</div><div class="chip wood on">ไม้</div><div class="cex">ดำ / น้ำเงิน</div></div>
+<div class="lrow"><div class="chip wood">ไม้</div><div class="rel">เข้ากกัน (สหาย)</div><div class="chip wood on">ไม้</div><div class="cex">เขียว</div></div>
+<div class="lrow"><div class="chip metal">โลหะ</div><div class="rel">กด (ศัตรู)</div><div class="chip wood on">ไม้</div><div class="cex">ขาว / ทอง / เงิน → เลี่่ยง</div></div>
+</div></div>
+</div>
+</div>
+</body>
+</html>

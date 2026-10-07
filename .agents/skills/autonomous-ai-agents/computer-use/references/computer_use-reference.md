@@ -1,0 +1,148 @@
+---
+title: "computer-use — reference material"
+date: "2026-10-06"
+type: "note"
+stage: "Knowledge"
+topic: "computer_use-reference"
+tags: [skill-reference, computer-use]
+source_classes: [synthesis]
+status: "verified"
+summary: "Deep reference sections moved verbatim out of computer-use/SKILL.md so the loaded body stays small."
+---
+
+## Actions
+
+```
+capture           mode=som|vision|ax   app=…  (default: current app)
+click             element=N     OR     coordinate=[x, y]    button=left|right|middle
+double_click      element=N     OR     coordinate=[x, y]
+right_click       element=N     OR     coordinate=[x, y]
+middle_click      element=N     OR     coordinate=[x, y]
+drag              from_element=N, to_element=M        (or from/to_coordinate)
+scroll            direction=up|down|left|right   amount=3 (ticks)
+type              text="…"
+key               keys="<save shortcut>" | "return" | "escape" | "<modifier>+t"
+set_value         element=N  value="…"     (selects/sliders without opening the menu)
+wait              seconds=0.5
+list_apps
+list_windows
+focus_app         app="<app name>"   raise_window=false   (default: don't raise)
+```
+
+All actions accept optional `capture_after=True` to get a follow-up
+screenshot in the same tool call. All actions that target an element
+accept `modifiers=[…]` for held keys.
+
+The input actions (`click`, `double_click`, `right_click`, `middle_click`,
+`drag`, `scroll`, `type`, `key`) also accept `delivery_mode`. The optional
+`bring_to_front=True` request invokes a separately approved standalone focus
+tool before foreground input; it is never an input-action property.
+
+## The verify → escalate ladder (background-first)
+
+cua-driver delivers input in the **background** by default (no focus steal),
+but that is the first rung, not the only one. Every input action returns a
+structured verdict; read it and climb only when the driver tells you to.
+
+Returned fields (present when the driver supports them):
+- `effect`: `"confirmed"` (driver read the result back — done), `"unverifiable"`
+  (delivered, but confirm it yourself by re-capturing), or `"suspected_noop"`
+  (ran but almost certainly did nothing).
+- `escalation`: `{recommended: "px" | "foreground", reason}` — present
+  only when there's a next rung to try.
+- `code`: a structured refusal like `"background_unavailable"`,
+  `"foreground_unsupported"`, or `"stale"` (re-capture, then retry by index).
+- `verified`: `true` only on AX read-back.
+
+Walk it in order:
+
+1. **Element, background (default).** `click(element=N)`. If `effect:"confirmed"`,
+   you're done.
+2. **Fresh verification.** `effect:"unverifiable"` means inspect a fresh
+   capture/state before any retry. Do this even when `escalation.recommended`
+   is present; it is advisory, not proof that successful input should repeat.
+3. **Pixel, background.** After `effect:"suspected_noop"` or a structured
+   refusal recommends `"px"` (or a `degraded` capture has no elements), click
+   by `coordinate=[x,y]` instead of `element`.
+4. **Foreground.** After `effect:"suspected_noop"`,
+   `code:"background_unavailable"`, or a verified pixel no-op,
+   re-issue the SAME action with `delivery_mode="foreground"`. This briefly
+   raises the window and restores focus after; pair with `bring_to_front=True`
+   for a short sequence to avoid per-call flashes. It needs its own approval
+   (it's a visible focus change) and is only appropriate when the user isn't
+   actively working. Classic cases: Electron/Chromium consent dialogs (e.g.
+   tldraw offline's "Run Script"), DirectInput games, raw-input canvases.
+5. **Keystrokes verified-lost on a KDE/Qt editor → use the app's own I/O.**
+   Some Qt text components (KTextEditor: Kate, KWrite, KDevelop) discard
+   SYNTHETIC X keystrokes entirely — foreground `type` reports ok
+   ("Typed N characters into the focused widget", `effect:"unverifiable"`)
+   but a fresh AX capture shows the text never arrived, and raw XTest fails
+   identically (proven live, Aug 2026 — it is the toolkit, not the driver;
+   the same foreground route works on kcalc/Chrome). After ONE such
+   verified-lost round trip, stop retrying input rungs: write the file with
+   terminal/file tools and let the editor reload it, or drive the app's
+   DBus/CLI interface. Never loop the ladder against a surface that
+   verifiably swallows synthetic input.
+
+```
+computer_use(action="click", element=7)
+# → {effect: "suspected_noop", escalation: {recommended: "foreground", ...}}
+computer_use(action="click", element=7, delivery_mode="foreground")
+# → {effect: "unverifiable", path: "x11_pixel_fg"}   then re-capture to confirm
+```
+
+**Escalate to foreground as a REACTION to a returned signal, never as a
+prediction** from the app being Electron/Chromium/GTK. A confirmed effect is
+done and must not be duplicated. Different controls in
+the same app behave differently. Do NOT silently retry the same rung, and do
+NOT conclude "cua-driver can't drive this app" — climb the ladder. If
+`delivery_mode="foreground"` returns `code:"foreground_unsupported"`, the live
+action schema lacks that property; choose another verified rung without
+inferring support from the executable's reported version.
+
+## Going deeper — read the cua-driver skill pack
+
+Hermes intentionally keeps THIS skill focused on the Hermes-side
+`computer_use` action vocabulary. The platform-specific deep dives
+(macOS no-foreground contract, Windows UIA + Session 0, Linux AT-SPI +
+X11/Wayland nuances, recording trajectory + video, browser-page
+interaction, etc.) live in cua-driver's skill pack — same content the
+cua-driver team ships and maintains for every other agent harness.
+
+```
+cua-driver skills install
+```
+
+links the pack into `~/.hermes/skills/cua-driver` (Hermes is a detected
+agent; `cua-driver skills status` shows the link state). You'll then have:
+
+- `SKILL.md` — the cross-platform core (snapshot invariant, no-
+  foreground contract, click dispatch, AX tree mechanics)
+- `MACOS.md` — macOS specifics (no-foreground contract, AXMenuBar
+  navigation, SkyLight click dispatch, Apple Events JS bridge)
+- `WINDOWS.md` — Windows specifics (UIA tree, UWP / ApplicationFrameHost
+  hosting, Session 0 isolation, autostart pattern for SSH)
+- `LINUX.md` — Linux specifics (AT-SPI tree, X11 / Wayland, terminal
+  emulator detection)
+- `RECORDING.md` — trajectory + video recording semantics
+- `WEB_APPS.md` — browser page interaction tips
+- `TESTS.md` — replay-by-trajectory workflow
+
+Those files describe the driver's OWN MCP tools (`get_window_state`,
+`element_token`, `snapshot_id`, …). Read them for platform context; keep
+calling the Hermes actions from this file — the wrapper does the translation.
+
+## Failure modes — what to do when things go sideways
+
+| Symptom | Likely cause + remedy |
+|---|---|
+| `cua-driver not installed` | Run `hermes computer-use install`, or `hermes tools` and enable Computer Use |
+| Captures consistently return empty / "no on-screen window" | On Linux: DISPLAY may not be set (X11) or you're on pure Wayland — ask the user to run `hermes computer-use doctor`. On Windows: you may be in Session 0 (SSH session) instead of the interactive desktop — see the cua-driver `WINDOWS.md` deep-dive |
+| `code:"stale"` / "element_token is stale" | Indices belong to one snapshot. Re-`capture`, read the new indices, then act. Never reuse an index across a capture |
+| "bare element_index is not accepted" / `snapshot_id_required` | The driver saw a raw index without its token. This is a wrapper defect, not something you fix by passing `snapshot_id` (Hermes has no such argument). Re-capture once; if it repeats, tell the user to run `hermes update` and fall back to `coordinate=[x, y]` from the capture's bounds meanwhile |
+| "tool 'capture' has no reviewed risk classification" / `Unknown tool` | Something called the driver's MCP vocabulary directly (`capture`, `screenshot`, `get_window_state`, `click` with raw args). Only the `computer_use(action=…)` vocabulary in this file exists on the Hermes side |
+| Click had no effect | Read the structured verdict. `effect:"unverifiable"` → fresh capture/state before retry, even with an escalation hint. `effect:"suspected_noop"` or a structured refusal → climb the recommended ladder: coordinate (px), then foreground. Browser chrome/native prompts remain native; page content is a separate toolset. Don't conclude the app is undrivable |
+| Type text disappears into a terminal emulator | cua-driver detects terminals (Ghostty, iTerm2, Terminal.app, Windows Terminal, mintty, etc.) and routes through key-event synthesis — should "just work" on a recent cua-driver. If it doesn't, ask the user to run `hermes computer-use doctor` |
+| `blocked pattern in type text` | You tried to `type` a shell command matching the dangerous-pattern block list (`curl ... \| bash`, `sudo rm -rf`, etc.). Break the command up or reconsider |
+| `hermes computer-use doctor` says "could not be started … Access is denied" (Windows) | The Hermes venv interpreter can't execute a binary under `C:\Program Files\WindowsApps`; the tool itself may still work because the shell resolves another copy on PATH. Fix once: reinstall cua-driver with the upstream installer (lands under the user profile) or set `HERMES_CUA_DRIVER_CMD` to a copy outside `WindowsApps`. The same denial spams `errors.log` for any other `WindowsApps` binary Hermes spawns (e.g. `bws.exe`) |
+| Anything else weird | **First action: ask the user to run `hermes computer-use doctor`.** It runs the cua-driver `health_report` MCP tool and prints a structured per-check matrix. Their output tells you (and them) exactly what's wrong |

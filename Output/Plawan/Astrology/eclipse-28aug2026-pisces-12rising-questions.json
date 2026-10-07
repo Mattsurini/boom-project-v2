@@ -1,0 +1,48 @@
+{
+  "topic": "Partial Lunar Eclipse 28 Aug 2026 in Pisces 4°54' — impact by 12 rising signs",
+  "eclipse": {
+    "datetime_utc": "2026-08-28T04:18:00Z",
+    "datetime_ict": "2026-08-28T11:18:00+07:00",
+    "type": "partial lunar (96.2% umbral)",
+    "degree_tropical": 334.9,
+    "sign_tropical": "Pisces",
+    "degree_sidereal_lahiri": 279.78,
+    "sign_sidereal_lahiri": "Aquarius",
+    "eclipse_set": "Virgo-Pisces #6 of 7 (Sep 2024 - Feb 2027)"
+  },
+  "key_aspects": [
+    "Moon opp Mercury 0.47°",
+    "Moon sq Uranus 0.72°",
+    "Moon conj Mean Node 5.4°"
+  ],
+  "phases": {
+    "phase1_establishing_facts": [
+      "What do classical texts (BPHS, Brihat Jataka, Saravali, Phaladeepika) say about a partial lunar eclipse at the exact node degree (Rahu-Ketu conjunction)?",
+      "What is the classical rule for interpreting a lunar eclipse by house placement — whole-sign vs Placidus, and how do the two systems differ for this degree?",
+      "What do the classics say about a lunar eclipse opposing Mercury (communication/contracts) and squaring Uranus (sudden disruption)?",
+      "What is the significance of this being the 6th of 7 eclipses in the same Virgo-Pisces set — does the classical tradition give special weight to late-set eclipses?",
+      "What do the classics say about the difference between tropical and sidereal (Rahu-Ketu) house placement for eclipse effects?"
+    ],
+    "phase2_testing_hypothesis": [
+      "Does the Moon-Mercury opposition (0.47°) support the hypothesis that this eclipse's sharpest effect is on communication, contracts, and written matters for all 12 risings?",
+      "Does the Moon-Uranus square (0.72°) support the hypothesis that the eclipse triggers sudden releases of long-brewing patterns rather than new beginnings?",
+      "For each of the 12 rising signs, does the whole-sign house placement of Pisces 4°54' produce a coherent, distinct life-area theme (vs Placidus placement)?",
+      "Does the 96.2% umbral coverage (near-total) justify treating this as functionally a total eclipse in interpretation?",
+      "What post-eclipse transit windows (30/60/90 days) re-trigger the Virgo-Pisces axis most strongly?"
+    ],
+    "phase3_adversarial_critical": [
+      "What is the strongest argument that a partial (not total) lunar eclipse at 4°54' Pisces is astrologically weak or negligible?",
+      "Is the 12-rising-sign horoscope format (one theme per sign) too generic compared to individual natal chart analysis — what does the evidence say about its validity?",
+      "Are the 'eclipse set' narratives (6 of 7, almost tetrad) from modern popular astrology rather than classical tradition — is there classical support for treating an eclipse set as a unit?",
+      "What blind spots exist in analyzing only the eclipse moment + whole-sign houses, ignoring natal planet conjunctions at 4°54' Virgo/Pisces (the individual's actual trigger points)?"
+    ]
+  },
+  "blind_spot_sweep": "Review all provided sources and identify what critical information is MISSING that would be necessary to either prove or disprove that this partial lunar eclipse produces distinct, meaningful life-area shifts for each of the 12 rising signs. List specific gaps.",
+  "output_targets": {
+    "technical": "Output/Nut/Astrology/eclipse-28aug2026-pisces-12rising-technical.md",
+    "psychological": "Output/CK/Astrology/eclipse-28aug2026-pisces-12rising-psychological.md",
+    "audit": "Output/Arm/Astrology/eclipse-28aug2026-pisces-12rising-audit.md",
+    "critique": "Output/Nan/Astrology/eclipse-28aug2026-pisces-12rising-critique.md",
+    "convergence": "Output/Bella/Astrology/eclipse-28aug2026-pisces-12rising-convergence.md"
+  }
+}

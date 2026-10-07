@@ -1,0 +1,38 @@
+[
+  {
+    "phase": "facts",
+    "q": "What is retrograde/vakri astronomically and which planets can be retrograde?"
+  },
+  {
+    "phase": "facts",
+    "q": "What are the eight motions in BPHS Ch.27 and their strength values?"
+  },
+  {
+    "phase": "facts",
+    "q": "How does retrograde alter dasha timing in BPHS Vol.2 Ch.47?"
+  },
+  {
+    "phase": "facts",
+    "q": "What does Bhrigu Samhita say about Vakri planets and house effects?"
+  },
+  {
+    "phase": "facts",
+    "q": "What does KP say about retrograde ruling planets/significators?"
+  },
+  {
+    "phase": "testing",
+    "q": "When is retrograde strengthening vs obstructive?"
+  },
+  {
+    "phase": "testing",
+    "q": "How should interpretation differ for natal, transit, dasha, and horary/KP?"
+  },
+  {
+    "phase": "adversarial",
+    "q": "What popular retrograde claims are not found in the database?"
+  },
+  {
+    "phase": "blind_spot",
+    "q": "What source gaps remain for psychological interpretation of retrograde?"
+  }
+]

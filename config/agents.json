@@ -1,0 +1,391 @@
+{
+  "version": 2,
+  "note": "v2: aliases removed (they pointed at forbidden stage-alias folders). merged_from records what was collapsed. Responsibility is single-sourced.",
+  "agents": {
+    "Plawan": {
+      "id": "Plawan",
+      "role": "Idea generator \u2014 turns questions into idea cards and blueprints.",
+      "responsibilities": [
+        "ideation",
+        "idea cards",
+        "blueprints"
+      ],
+      "output_stage": "Plawan",
+      "tags": [
+        "ideas",
+        "blueprint"
+      ],
+      "merged_from": [
+        "plawan",
+        "idea-generator"
+      ],
+      "name": "Plawan",
+      "output_dir": "Plawan",
+      "output_aliases": [],
+      "default_tags": [
+        "ideas",
+        "blueprint"
+      ],
+      "index_type": null
+    },
+    "Nut": {
+      "id": "Nut",
+      "role": "Astrology assistant \u2014 chart calculation and technical extraction.",
+      "responsibilities": [
+        "astrology chart calculation",
+        "transit and dasha extraction",
+        "horary and divisional chart analysis"
+      ],
+      "output_stage": "Nut",
+      "tags": [
+        "astrology",
+        "chart"
+      ],
+      "merged_from": [
+        "nut",
+        "astrology-assistant",
+        "natal-chart"
+      ],
+      "name": "Nut",
+      "output_dir": "Nut",
+      "output_aliases": [],
+      "default_tags": [
+        "astrology",
+        "chart"
+      ],
+      "index_type": null
+    },
+    "CK": {
+      "id": "CK",
+      "role": "Research specialist \u2014 extracts psychological and technical insight.",
+      "responsibilities": [
+        "psychological insight extraction",
+        "knowledge synthesis from sources",
+        "behavioural pattern analysis"
+      ],
+      "output_stage": "CK",
+      "tags": [
+        "research",
+        "extraction"
+      ],
+      "merged_from": [
+        "ck",
+        "research-specialist"
+      ],
+      "name": "CK",
+      "output_dir": "CK",
+      "output_aliases": [],
+      "default_tags": [
+        "research",
+        "extraction"
+      ],
+      "index_type": null
+    },
+    "Nan": {
+      "id": "Nan",
+      "role": "Research critic \u2014 finds the weakness in a conclusion.",
+      "responsibilities": [
+        "critique and counter-argument",
+        "quality review of conclusions"
+      ],
+      "output_stage": "Nan",
+      "tags": [
+        "critique",
+        "review"
+      ],
+      "merged_from": [
+        "nan",
+        "research-critic"
+      ],
+      "name": "Nan",
+      "output_dir": "Nan",
+      "output_aliases": [],
+      "default_tags": [
+        "critique",
+        "review"
+      ],
+      "index_type": null
+    },
+    "Arm": {
+      "id": "Arm",
+      "role": "Audit researcher \u2014 verifies claims against sources.",
+      "responsibilities": [
+        "source verification",
+        "fact-checking",
+        "claim auditing"
+      ],
+      "output_stage": "Arm",
+      "tags": [
+        "audit",
+        "verification"
+      ],
+      "merged_from": [
+        "arm",
+        "audit-researcher"
+      ],
+      "name": "Arm",
+      "output_dir": "Arm",
+      "output_aliases": [],
+      "default_tags": [
+        "audit",
+        "verification"
+      ],
+      "index_type": null
+    },
+    "Bella": {
+      "id": "Bella",
+      "role": "Project writer \u2014 turns analysis into finished prose.",
+      "responsibilities": [
+        "narrative synthesis",
+        "report writing",
+        "client-facing polish"
+      ],
+      "output_stage": "Bella",
+      "tags": [
+        "writing",
+        "synthesis"
+      ],
+      "merged_from": [
+        "bella",
+        "project-writer"
+      ],
+      "name": "Bella",
+      "output_dir": "Bella",
+      "output_aliases": [],
+      "default_tags": [
+        "writing",
+        "synthesis"
+      ],
+      "index_type": null
+    },
+    "Sandee": {
+      "id": "Sandee",
+      "role": "ML/AI technical research specialist.",
+      "responsibilities": [
+        "machine-learning research",
+        "artificial-intelligence benchmarking",
+        "model evaluation"
+      ],
+      "output_stage": "Sandee",
+      "tags": [
+        "ml",
+        "ai"
+      ],
+      "merged_from": [
+        "sandee",
+        "ml-ai-specialist"
+      ],
+      "name": "Sandee",
+      "output_dir": "Sandee",
+      "output_aliases": [],
+      "default_tags": [
+        "ml",
+        "ai"
+      ],
+      "index_type": null
+    },
+    "Eng": {
+      "id": "Eng",
+      "role": "File, index and registry steward (Libby) \u2014 classifies and indexes outputs.",
+      "responsibilities": [
+        "file classification",
+        "frontmatter normalisation",
+        "index and manifest building"
+      ],
+      "output_stage": "Sources",
+      "tags": [
+        "indexing",
+        "files"
+      ],
+      "merged_from": [
+        "eng",
+        "eng-libby",
+        "libby"
+      ],
+      "name": "Eng",
+      "output_dir": "Sources",
+      "output_aliases": [],
+      "default_tags": [
+        "indexing",
+        "files"
+      ],
+      "index_type": null
+    },
+    "Ekae": {
+      "id": "Ekae",
+      "role": "Project-operations collaborator \u2014 preferences, planning, task state.",
+      "responsibilities": [
+        "task planning",
+        "preference tracking",
+        "operational decisions"
+      ],
+      "output_stage": "Ekae",
+      "tags": [
+        "operations",
+        "planning"
+      ],
+      "merged_from": [
+        "ekae"
+      ],
+      "name": "Ekae",
+      "output_dir": "Ekae",
+      "output_aliases": [],
+      "default_tags": [
+        "operations",
+        "planning"
+      ],
+      "index_type": null
+    },
+    "Bed": {
+      "id": "Bed",
+      "role": "Golden-insight extractor \u2014 mines durable insight from sessions.",
+      "responsibilities": [
+        "durable insight capture",
+        "session mining"
+      ],
+      "output_stage": "Sources",
+      "tags": [
+        "insight"
+      ],
+      "merged_from": [
+        "bed"
+      ],
+      "name": "Bed",
+      "output_dir": "Sources",
+      "output_aliases": [],
+      "default_tags": [
+        "insight"
+      ],
+      "index_type": null
+    }
+  },
+  "flow_stages": [
+    "Plawan",
+    "CK",
+    "Nut",
+    "Arm",
+    "Nan",
+    "Bella"
+  ],
+  "topic_keywords": {
+    "astrology": [
+      "natal",
+      "transit",
+      "synastry",
+      "horary",
+      "vedic",
+      "western",
+      "uranian",
+      "nakshatra",
+      "dasa",
+      "bhava",
+      "graha",
+      "rashi",
+      "planet",
+      "house",
+      "sign",
+      "aspect",
+      "conjunction",
+      "opposition",
+      "trine",
+      "square",
+      "sextile"
+    ],
+    "psychology": [
+      "attachment",
+      "trauma",
+      "belief",
+      "cognitive",
+      "behavior",
+      "personality",
+      "shadow",
+      "jung",
+      "freud",
+      "archetype",
+      "projection",
+      "defense",
+      "mechanism"
+    ],
+    "relationships": [
+      "soulmate",
+      "marriage",
+      "partnership",
+      "compatibility",
+      "love",
+      "dating",
+      "romantic",
+      "intimacy",
+      "commitment",
+      "divorce",
+      "breakup"
+    ],
+    "financial-astrology": [
+      "market",
+      "trading",
+      "gold",
+      "bitcoin",
+      "stock",
+      "index",
+      "volatility",
+      "timing",
+      "entry",
+      "exit"
+    ],
+    "ml-ai": [
+      "ml",
+      "machine learning",
+      "machine-learning",
+      "artificial intelligence",
+      "artificial-intelligence",
+      "deep learning",
+      "llm",
+      "language model",
+      "rag",
+      "fine-tuning",
+      "benchmark",
+      "dataset",
+      "inference",
+      "mlops",
+      "deepseek",
+      "gpt-5.6",
+      "openai"
+    ],
+    "methodology": [
+      "framework",
+      "model",
+      "system",
+      "approach",
+      "technique",
+      "process",
+      "pipeline"
+    ],
+    "critique": [
+      "flaw",
+      "gap",
+      "weakness",
+      "strength",
+      "evaluation",
+      "assessment"
+    ],
+    "convergence": [
+      "synthesis",
+      "integration",
+      "cross-domain",
+      "multi-perspective",
+      "unified"
+    ],
+    "technical": [
+      "calculation",
+      "computation",
+      "algorithm",
+      "formula",
+      "precision",
+      "accuracy"
+    ]
+  },
+  "_provenance": {
+    "topic_keywords": "recovered verbatim from .rebuild/backup/20261006T125645/BOOM/config/agents.yaml",
+    "flow_stages": "recovered verbatim from same backup",
+    "note": "agents section is the rebuilt v2 registry; the other two sections are libby/classifier.py inputs that must not be regenerated by inference"
+  }
+}

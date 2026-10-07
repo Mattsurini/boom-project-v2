@@ -1,0 +1,130 @@
+# GENERATED FILE — do not edit by hand.
+# Source of truth: config/agents.json  (regenerate: python scripts/export_agents_yaml.py)
+#
+# v2 rebuild note: `output_aliases` were removed. The old file mapped agents
+# onto stage-alias folders (Output/research-specialist, Output/idea-generator, ...)
+# which the project rules explicitly forbid. Each agent now has exactly one
+# canonical output stage.
+
+agents:
+  Plawan:
+    name: Plawan
+    role: Idea generator — turns questions into idea cards and blueprints.
+    output_dir: Plawan
+    output_aliases: []
+    default_tags: [ideas, blueprint]
+    responsibilities:
+      - ideation
+      - idea cards
+      - blueprints
+    merged_from: [plawan, idea-generator]
+  Nut:
+    name: Nut
+    role: Astrology assistant — chart calculation and technical extraction.
+    output_dir: Nut
+    output_aliases: []
+    default_tags: [astrology, chart]
+    responsibilities:
+      - astrology chart calculation
+      - transit and dasha extraction
+      - horary and divisional chart analysis
+    merged_from: [nut, astrology-assistant, natal-chart]
+  CK:
+    name: CK
+    role: Research specialist — extracts psychological and technical insight.
+    output_dir: CK
+    output_aliases: []
+    default_tags: [research, extraction]
+    responsibilities:
+      - psychological insight extraction
+      - knowledge synthesis from sources
+      - behavioural pattern analysis
+    merged_from: [ck, research-specialist]
+  Nan:
+    name: Nan
+    role: Research critic — finds the weakness in a conclusion.
+    output_dir: Nan
+    output_aliases: []
+    default_tags: [critique, review]
+    responsibilities:
+      - critique and counter-argument
+      - quality review of conclusions
+    merged_from: [nan, research-critic]
+  Arm:
+    name: Arm
+    role: Audit researcher — verifies claims against sources.
+    output_dir: Arm
+    output_aliases: []
+    default_tags: [audit, verification]
+    responsibilities:
+      - source verification
+      - fact-checking
+      - claim auditing
+    merged_from: [arm, audit-researcher]
+  Bella:
+    name: Bella
+    role: Project writer — turns analysis into finished prose.
+    output_dir: Bella
+    output_aliases: []
+    default_tags: [writing, synthesis]
+    responsibilities:
+      - narrative synthesis
+      - report writing
+      - client-facing polish
+    merged_from: [bella, project-writer]
+  Sandee:
+    name: Sandee
+    role: ML/AI technical research specialist.
+    output_dir: Sandee
+    output_aliases: []
+    default_tags: [ml, ai]
+    responsibilities:
+      - machine-learning research
+      - artificial-intelligence benchmarking
+      - model evaluation
+    merged_from: [sandee, ml-ai-specialist]
+  Eng:
+    name: Eng
+    role: File, index and registry steward (Libby) — classifies and indexes outputs.
+    output_dir: Sources
+    output_aliases: []
+    default_tags: [indexing, files]
+    responsibilities:
+      - file classification
+      - frontmatter normalisation
+      - index and manifest building
+    merged_from: [eng, eng-libby, libby]
+  Ekae:
+    name: Ekae
+    role: Project-operations collaborator — preferences, planning, task state.
+    output_dir: Ekae
+    output_aliases: []
+    default_tags: [operations, planning]
+    responsibilities:
+      - task planning
+      - preference tracking
+      - operational decisions
+    merged_from: [ekae]
+  Bed:
+    name: Bed
+    role: Golden-insight extractor — mines durable insight from sessions.
+    output_dir: Sources
+    output_aliases: []
+    default_tags: [insight]
+    responsibilities:
+      - durable insight capture
+      - session mining
+    merged_from: [bed]
+
+flow_stages: [Plawan, CK, Nut, Arm, Nan, Bella]
+
+topic_keywords:
+  astrology: [natal, transit, synastry, horary, vedic, western, uranian, nakshatra, dasa, bhava, graha, rashi, planet, house, sign, aspect, conjunction, opposition, trine, square, sextile]
+  psychology: [attachment, trauma, belief, cognitive, behavior, personality, shadow, jung, freud, archetype, projection, defense, mechanism]
+  relationships: [soulmate, marriage, partnership, compatibility, love, dating, romantic, intimacy, commitment, divorce, breakup]
+  financial-astrology: [market, trading, gold, bitcoin, stock, index, volatility, timing, entry, exit]
+  ml-ai: [ml, machine learning, machine-learning, artificial intelligence, artificial-intelligence, deep learning, llm, language model, rag, fine-tuning, benchmark, dataset, inference, mlops, deepseek, gpt-5.6, openai]
+  methodology: [framework, model, system, approach, technique, process, pipeline]
+  critique: [flaw, gap, weakness, strength, evaluation, assessment]
+  convergence: [synthesis, integration, cross-domain, multi-perspective, unified]
+  technical: [calculation, computation, algorithm, formula, precision, accuracy]

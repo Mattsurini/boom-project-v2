@@ -1,0 +1,54 @@
+{
+  "title": "How to Know if a Relationship Is Good or Bad",
+  "slug": "relationship-good-or-bad",
+  "contextNoteTitle": "Context: Relationship Quality — Good vs Bad Research",
+  "contextNote": "You are a research analyst with mastery of classical Jyotisha (Vedic astrology) and modern Western tropical astrology, plus a critical, evidence-first mindset. You are helping test the hypothesis: \"A relationship's quality ('good' vs. 'bad') is not one astrological signature but a weighted convergence of four layers — (a) the event/quality promise (7th house + 7th lord dignity + Venus with benefic/malefic aspect), (b) the character layer (D-9 Navamsa arbiter, Darakaraka, Upapada Lagna), (c) the compatibility screen (guna/dosha with classical cancellations, synastry), and (d) psychological fit (attachment, work-it-out vs. fate-dependence). When the layers converge, the verdict is reliable; when they conflict, D-9 and the fit layer arbitrate.\"\n\nWhile answering, keep in mind: (1) Separate the EVENT (marriage happens) from the QUALITY (good/bad) from the SUBJECTIVE EXPERIENCE — three separable layers; a strong marriage-yoga does NOT promise happiness (BPHS Ch.18 sl.16-17, 35). (2) Weight dignity, dasha, D-9, and Upapada Lagna together; no single placement proves anything. (3) Quote shloka/chapter numbers whenever possible; if a claim is NOT in the sources, say \"NOT IN SOURCES\" explicitly rather than inventing it. (4) Where Vedic and Western verdicts diverge, flag the conflict rather than forcing agreement. (5) You are encouraged to flag weaknesses in the astrological premise itself.",
+  "questions": [
+    {
+      "id": "Q1",
+      "phase": "Phase 1 — Establishing the Technical Baseline",
+      "prompt": "Across BPHS Ch.18 (Yuvati Bhava), Brihat Jataka Ch.4, Phaladeepika, and Saravali: what exactly do the classics say makes a marriage/relationship harmonious and durable vs. quarrelsome and short-lived? Quote the shloka numbers naming benefics-on-7th = happiness and malefics-on-7th = discord."
+    },
+    {
+      "id": "Q2",
+      "phase": "Phase 1 — Establishing the Technical Baseline",
+      "prompt": "What is the classical hierarchy for judging relationship quality — 7th house, 7th lord dignity, Venus (Shukra), D-9 Navamsa, Upapada Lagna (2nd from Arudha of 12th)? Which texts prioritize which, and where do the layers conflict?"
+    },
+    {
+      "id": "Q3",
+      "phase": "Phase 1 — Establishing the Technical Baseline",
+      "prompt": "What are the classical rules for a \"bad\" relationship — 7th lord in 6/8/12, debilitated/combust 7th lord or Venus, Papa Kartari, Mangal/Kuja dosha — and which cancellation rules exist (Neecha Bhanga, benefic aspect, dosha cancellation)?"
+    },
+    {
+      "id": "Q4",
+      "phase": "Phase 2 — Testing the Hypothesis",
+      "prompt": "Can a \"marriage-yoga-heavy\" chart still produce a bad relationship? What do BPHS Ch.18 (sl.16-17, 35) and other classics say distinguishes the promise of marriage from the promise of happiness?"
+    },
+    {
+      "id": "Q5",
+      "phase": "Phase 2 — Testing the Hypothesis",
+      "prompt": "How does the D-9 Navamsa arbitrate quality — what does a strong D-9 (7th, D-9 lagna, dignified D-9 7th lord) do to a D-1 warning, and vice versa? What do Upapada Lagna and benefics/malefics on/from the UL say about marital happiness vs. misery?"
+    },
+    {
+      "id": "Q6",
+      "phase": "Phase 2 — Testing the Hypothesis",
+      "prompt": "Do the classical texts + modern synthesis (KN Rao, Jagannath Hora) support a \"Relationship Quality Scorecard\" — a weighted combination of 7th/Venus dignity + D-9 + UL + dosha cancellations? What weights would they assign, and what do they refuse to promise?"
+    },
+    {
+      "id": "Q7",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: Is \"good/bad relationship\" even astrologically answerable, or does it collapse into psychological fit (attachment, work-it-out vs. fate-dependence)? Where do the classics and the psychology literature (Franiuk, Wilcox & Dew, Evans) draw the boundary of what the chart can and cannot tell you?"
+    },
+    {
+      "id": "Q8",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: When Vedic and Western (tropical synastry/composite) systems disagree on a relationship's quality, which layer arbitrates? Do the imported Western sources converge with or contradict the classical Vedic verdicts?"
+    },
+    {
+      "id": "Q9",
+      "phase": "Phase 3 — Adversarial / Critical Check",
+      "prompt": "Challenge: What is the strongest evidence that affliction markers (Mars-in-7th, Saturn-in-7th, doshas) are over-weighted or under-weighted relative to their classical status — and which combinations are actually benign or even favorable (e.g., Saturn-in-7th conferring stability)?"
+    }
+  ],
+  "blindSpot": "Given only the sources provided, list everything that is MISSING that would be critical to proving whether a chart can reliably separate a \"good\" relationship from a \"bad\" one. Focus on: (1) a real, verified dataset of charts with known relationship outcomes (good/bad, longevity, satisfaction) — without one, the scorecard is untested; (2) psychological evidence on attachment style, conflict resolution, and the soulmate-belief × fit interaction that could refute or limit the astrological claim; (3) missing classical material on Upapada Lagna / marital happiness, dosha cancellation, and benefic/malefic-on-7th shlokas; (4) Western tropical sources on synastry/composite quality markers not yet imported; and (5) the distinction between the marriage event, the marriage character, and the subjective experience of \"good/bad.\" For each gap, say exactly what evidence or source is needed to close it."
+}

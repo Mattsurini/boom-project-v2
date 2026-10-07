@@ -1,0 +1,19 @@
+{
+  "topic": "หลักการอ่านดวง Transit แบบใช้ DB + เว็บเป็น source material",
+  "phase_1_establishing_facts": [
+    "เว็บภายนอกพูดว่า transit ต้องอ่านกับ natal chart/house/aspect อย่างไร?",
+    "DB/Vedic Gochara พูดเรื่อง Bhava span และ Upachaya อย่างไร?",
+    "แหล่งไหนสนับสนุน slow planets as context และ inner planets as timing refinement?"
+  ],
+  "phase_2_testing_hypothesis": [
+    "สมมติฐาน hierarchy: natal promise → house/Bhava → aspect/orb → slow-planet context → fast trigger. แหล่งไหนสนับสนุนแต่ละชั้น?",
+    "เว็บภายนอกให้ insight ใหม่อะไรที่ DB ไม่ให้?",
+    "DB ให้ insight อะไรที่เว็บ popular astrology ไม่ค่อยพูด?"
+  ],
+  "phase_3_adversarial_check": [
+    "ข้อสรุปไหนเป็น source-backed จริง และข้อไหนเป็น synthesis?",
+    "มีแหล่งไหนอ่อน/โดน blocker/ควรลดน้ำหนัก?",
+    "ถ้าจะเอาไปสอน PAC ควรตัด deterministic claim อะไรออก?"
+  ],
+  "blind_spot_sweep": "Identify missing primary Western transit sources, inaccessible pages, and whether a worked example is needed before public teaching."
+}

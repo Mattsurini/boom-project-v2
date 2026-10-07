@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "note": "Ask JEV is a decision-support layer. Default is NEVER. Triggers must fire.",
+  "policies": {
+    "architecture-migration": {
+      "name": "architecture-migration",
+      "description": "Restructuring or deleting components; hard to reverse.",
+      "escalate_when": [
+        "options >= 3",
+        "irreversible = true",
+        "touches_user_data = true",
+        "confidence < 0.7"
+      ],
+      "never_escalate": [
+        "reversible = true",
+        "scope = single_file"
+      ],
+      "confidence_floor": 0.0
+    },
+    "external-side-effect": {
+      "name": "external-side-effect",
+      "description": "Anything visible outside this machine.",
+      "escalate_when": [
+        "publish = true",
+        "send = true",
+        "cost > 0"
+      ],
+      "never_escalate": [],
+      "confidence_floor": 0.0
+    },
+    "content-publication": {
+      "name": "content-publication",
+      "description": "PAC / IG content going public.",
+      "escalate_when": [
+        "publish = true",
+        "client_facing = true"
+      ],
+      "never_escalate": [
+        "draft_only = true"
+      ],
+      "confidence_floor": 0.0
+    },
+    "astrology-interpretation": {
+      "name": "astrology-interpretation",
+      "description": "Chart reads. Interpretation is Turboz's job, not a committee's.",
+      "escalate_when": [],
+      "never_escalate": [],
+      "confidence_floor": -1.0
+    },
+    "routine-navigation": {
+      "name": "routine-navigation",
+      "description": "Finding, reading, running a registered component.",
+      "escalate_when": [],
+      "never_escalate": [],
+      "confidence_floor": -1.0
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.env
+.env.*
+!.env.example
+cache/
+
+# --- agent runtime noise (never source of truth) ---
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+logs/
+audio_cache/
+image_cache/
+sandboxes/
+*.db
+*.db-shm
+*.db-wal
+*.lock
+*.log
+
+# Hermes skill-hub cache + curator runtime state, written into the live skill root
+.agents/skills/.hub/
+.agents/skills/.locks/
+.agents/skills/.usage.json
+.agents/skills/.usage.json.lock
+.agents/skills/.curator_state
+.curator_backups/
+.curator_ledger.jsonl
+
+# --- upstream repos vendored as directories (re-clone, don't vendor) ---
+stellium/
+power-design/
+frontend-slides/
+Deep-Research-skills/
+
+# --- big binaries / generated artifacts ---
+bin/
+.rebuild/
+.quarantine/
+
+# --- knowledge corpus: ~1GB of scanned PDFs stays on disk, not in git ---
+# Committed instead: the derived indexes under Knowledge/indexes/
+Knowledge/Astrology-Database/
+Knowledge/Tarot-Database/
+Tarot Knowledge/
+
+# --- editor / vault noise ---
+.obsidian/workspace*.json
+.obsidian/cache/

@@ -1,0 +1,12 @@
+{
+  "topic": "DeepSeek-V4-vs-GPT-5.6",
+  "domain": "ML-AI",
+  "questions": [
+    "What exact official variants and aliases exist?",
+    "What documented capabilities and limits differ?",
+    "What is the normalized price difference per 1M tokens?",
+    "What use cases favor each model?",
+    "What cannot be concluded without a controlled benchmark?"
+  ],
+  "source_policy": "official documentation first; external evidence required; no invented benchmarks"
+}

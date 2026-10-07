@@ -1,0 +1,394 @@
+{
+ "results": [
+  {
+   "name": "Abbe, Ernst",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 0.0,
+   "s_scientist": 1.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Achard, Franz Carl",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 0.0,
+   "s_scientist": 2.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Adair, Robert",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 0.0,
+   "s_scientist": 4.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Aigrain, Pierre",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 4.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Alcorn, George Edward Jr.",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 0.0,
+   "s_scientist": 1.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Alldredge, Leroy",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 2.0,
+   "s_scientist": 4.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Allen, Joseph P.",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 3.5,
+   "s_scientist": 2.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "All\u00e8gre, Claude",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 2.0,
+   "s_scientist": 1.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Alvarez, Luis Walter",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 3.5,
+   "s_scientist": 2.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Amaldi, Edoardo",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 7.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Agostini, Amedeo",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 0.5,
+   "s_scientist": 1.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Alfsen, Erik",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 2.0,
+   "s_scientist": 5.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Amaldi, Ugo",
+   "label": "scientist",
+   "rating": "C",
+   "s_athlete": 1.5,
+   "s_scientist": 3.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Anderson, Richard Loree",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 2.5,
+   "s_scientist": 1.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Andoyer, Marie Henri",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 4.0,
+   "s_scientist": 1.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Antoine, Jacques",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 1.0,
+   "pred": "tie"
+  },
+  {
+   "name": "Appell, Paul",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 2.0,
+   "s_scientist": 3.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Armellini, Giuseppe",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 0.0,
+   "s_scientist": 2.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Aubert, Karl Egil",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 1.5,
+   "s_scientist": 4.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Audin, Maurice",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 2.5,
+   "s_scientist": 2.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Aumann, Georg",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 2.5,
+   "s_scientist": 3.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Babbitt, Milton",
+   "label": "scientist",
+   "rating": "AA",
+   "s_athlete": 1.5,
+   "s_scientist": 3.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Abrams, Georgie",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 2.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Adams, Nicola",
+   "label": "athlete",
+   "rating": "B",
+   "s_athlete": 0.0,
+   "s_scientist": 1.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Adinolfi, Domenico",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 2.5,
+   "s_scientist": 2.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Adkins, Charles",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 2.0,
+   "s_scientist": 1.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Akins, Virgil",
+   "label": "athlete",
+   "rating": "A",
+   "s_athlete": 0.5,
+   "s_scientist": 1.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Ali, Laila",
+   "label": "athlete",
+   "rating": "A",
+   "s_athlete": 0.0,
+   "s_scientist": 1.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Ali, Muhammad",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 1.0,
+   "pred": "tie"
+  },
+  {
+   "name": "Ambers, Lou",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 2.0,
+   "s_scientist": 0.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Angehrn, Stefan",
+   "label": "athlete",
+   "rating": "C",
+   "s_athlete": 3.0,
+   "s_scientist": 6.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Angelmann, Valentin",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 4.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Annaloro, Gaetan",
+   "label": "athlete",
+   "rating": "C",
+   "s_athlete": 4.5,
+   "s_scientist": 1.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Anneet, Adrien",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 0.0,
+   "s_scientist": 2.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Annex, Hippolyte",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 3.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Antuofermo, Vito",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 2.0,
+   "s_scientist": 3.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Alcaraz, Carlos",
+   "label": "athlete",
+   "rating": "C",
+   "s_athlete": 0.5,
+   "s_scientist": 0.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Appelmans, Sabine",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 2.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Arz\u00fa, \u00c1lvaro",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 0.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Ashe, Arthur",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 0.0,
+   "s_scientist": 2.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Austin, Tracy",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 3.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Bambridge, Luke",
+   "label": "athlete",
+   "rating": "A",
+   "s_athlete": 1.0,
+   "s_scientist": 1.0,
+   "pred": "tie"
+  },
+  {
+   "name": "Barbier, Simone",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 1.0,
+   "s_scientist": 3.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Barth\u00e8s, Pierre",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 2.0,
+   "s_scientist": 0.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Bartoli, Marion",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 0.0,
+   "s_scientist": 1.0,
+   "pred": "scientist"
+  },
+  {
+   "name": "Becker, Boris",
+   "label": "athlete",
+   "rating": "AA",
+   "s_athlete": 3.5,
+   "s_scientist": 1.0,
+   "pred": "athlete"
+  },
+  {
+   "name": "Bedi, Kiran",
+   "label": "athlete",
+   "rating": "C",
+   "s_athlete": 0.5,
+   "s_scientist": 3.0,
+   "pred": "scientist"
+  }
+ ],
+ "skipped_no_time": [
+  "Abelson, Philip",
+  "Abraham, Henri",
+  "Al-Biruni, Abdul",
+  "Alfv\u00e9n, Hannes",
+  "Amagat, \u00c9mile",
+  "Amp\u00e8re, Andr\u00e9",
+  "Aumann, Robert",
+  "Agricola, Rodolphus",
+  "Agassi, Andre",
+  "Andreescu, Bianca",
+  "Baltacha, Elena",
+  "Barty, Ash"
+ ]
+}

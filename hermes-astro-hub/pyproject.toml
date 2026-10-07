@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-astro"
+version = "1.0.0"
+description = "Shared astrology calculation layer (flatlib personal orbs + XALEN ephemeris)"
+requires-python = ">=3.8"
+dependencies = ["xalen", "requests", "beautifulsoup4"]
+
+[tool.setuptools]
+packages = ["hermes_astro"]

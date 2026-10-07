@@ -1,0 +1,45 @@
+{
+  "topic": "Partial Lunar Eclipse 28 Aug 2026 — WESTERN/TROPICAL analysis, 12 rising signs",
+  "system": "WESTERN/Tropical",
+  "eclipse": {
+    "datetime_utc": "2026-08-28T04:13:00Z",
+    "datetime_ict": "2026-08-28T11:13:00+07:00",
+    "type": "partial lunar (96.2% surface, near-total)",
+    "degree_tropical": 334.9,
+    "sign_tropical": "Pisces",
+    "moon": "Pisces 4°54' Tropical",
+    "sun": "Virgo 4°54' Tropical",
+    "mercury": "Virgo 5°21' (cazimi Sun 12.6'<17' night before)",
+    "uranus": "Gemini 5°37'",
+    "north_node": "Aquarius 29°50'",
+    "aspects": ["Moon opp Sun+Mercury (Mercury cazimi)", "Moon sq Uranus 0.72°", "Moon conj North Node ~6°"],
+    "eclipse_set": "Virgo-Pisces #6 of 7 (Sep 2024 - Feb 2027)"
+  },
+  "phases": {
+    "phase1_establishing_facts": [
+      "In WESTERN/TROPICAL astrology, how is a partial lunar eclipse at 4°54' Pisces opposing Sun+Mercury at Virgo interpreted?",
+      "What is the classical Western rule (Ptolemy Tetrabiblos) for lunar eclipse duration/intensity, and does a partial (96.2%) eclipse carry less weight than total?",
+      "Mercury cazimi Sun the night before (Aug 27): what does it mean in Western astrology for clarity/communication right before the eclipse?",
+      "Moon square Uranus (0.72°) in Western astrology — sudden release, 'bendings' — how to weight vs the Moon-Mercury opposition?",
+      "A North Node lunar eclipse in Pisces (Moon 6° past North Node in Aquarius/Virgo axis) — progressive development meaning in Western terms?"
+    ],
+    "phase2_testing_hypothesis": [
+      "For each of 12 rising signs, does the TROPICAL whole-sign placement of Pisces 4°54' produce a distinct Western life-area theme (Aries 12H, Taurus 11H, ... Pisces 1H)?",
+      "Is the 'Dream Meets the Receipt' (Pisces intuition vs Virgo facts, Mercury cazimi) a coherent Western psychological frame for this eclipse?",
+      "Does the Moon sq Uranus (bendings of Mutable T-square: Moon Pisces + Sun/Mercury Virgo + Uranus Gemini) predict sudden, destabilizing but insightful release?"
+    ],
+    "phase3_adversarial_critical": [
+      "Strongest argument that a partial lunar eclipse in Pisces is astrologically weak or negligible in Western/Tropical terms",
+      "Is the per-rising-house format too generic vs individual natal chart analysis? (individual trigger = natal planets at ~4°54' Pisces/Virgo tropical)",
+      "Does treating the Virgo-Pisces eclipse set (2024-27) as a cumulative arc have rigorous Western support or is it popular-astrology overreach?"
+    ]
+  },
+  "blind_spot_sweep": "Identify what's MISSING in a Western/Tropical-only analysis of this eclipse that would be needed to prove/disprove distinct life-area impact per 12 risings.",
+  "output_targets": {
+    "technical": "Output/Nut/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-technical.md",
+    "psychological": "Output/CK/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-psychological.md",
+    "audit": "Output/Arm/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-audit.md",
+    "critique": "Output/Nan/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-critique.md",
+    "convergence": "Output/Bella/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-convergence.md"
+  }
+}

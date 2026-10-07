@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { background:#0e1220; }
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono',monospace;font-weight:500}
+  body { font-family:Inter,'Noto Sans Thai','Leelawadee UI','Tahoma',system-ui,sans-serif; }
+  .canvas {
+    width:1080px; height:1380px; position:relative; overflow:hidden;
+    background:
+      radial-gradient(1200px 700px at 85% 5%, rgba(212,169,78,.14), transparent 60%),
+      radial-gradient(900px 600px at 10% 100%, rgba(179,53,44,.12), transparent 60%),
+      #151a2e;
+    padding:34px 44px 24px;
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .cjk { font-family:'SimSun','Noto Serif CJK SC','Microsoft YaHei',serif; }
+  .header { display:flex; align-items:flex-end; justify-content:space-between; }
+  .kicker { color:#e0b45c; font-size:22px; letter-spacing:6px; margin-bottom:8px; }
+  .title { color:#f5efe0; font-size:52px; font-weight:700; line-height:1.05; }
+  .title .sub { display:block; font-size:24px; font-weight:400; color:#d3cdbd; margin-top:5px; }
+  .seal {width:112px;height:112px;background:#b3352c;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:14px;transform:rotate(-4deg);box-shadow:0 8px 24px rgba(179,53,44,.45), inset 0 0 0 3px rgba(255,255,255,.12);border:4px solid rgba(255,255,255,.25);}
+  .seal .big { font-size:44px; line-height:1; } .seal .small { font-size:13px; margin-top:5px; letter-spacing:2px; }
+  .row { display:flex; gap:22px; }
+  .card { background:#f5efe0; border-radius:18px; padding:16px 20px; box-shadow:0 6px 18px rgba(0,0,0,.35); position:relative; }
+  .card .label { font-size:21px; color:#6f6552; letter-spacing:2px; margin-bottom:10px; }
+  .hero { flex:7; display:flex; align-items:center; gap:28px; background:linear-gradient(135deg,#f7f1e2,#efe5cd); }
+  .hero .ganzhi { font-size:84px; line-height:1; color:#232635; font-weight:700; }
+  .hero .meta { border-left:3px solid #d4a94e; padding-left:20px; }
+  .hero .meta .zod { font-size:28px; font-weight:700; color:#232635; }
+  .hero .meta .elem { font-size:19px; color:#5a5344; margin-top:5px; }
+  .hero .meta .elem b { color:#b3352c; }
+  .lunar { flex:5; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#1d2340; }
+  .lunar .label { color:#9aa2c4; } .lunar .num { font-size:56px; font-weight:700; color:#f5efe0; line-height:1; } .lunar .num span { font-size:24px; font-weight:400; color:#c9c4b4; } .lunar .note { font-size:17px; color:#a3aacb; margin-top:8px; }
+  .trio .card { flex:1; text-align:center; padding:12px 10px; }
+  .trio .cjk.big { font-size:42px; color:#232635; line-height:1.15; }
+  .trio .th { font-size:22px; font-weight:700; color:#2b2b2b; margin-top:6px; }
+  .trio .el { font-size:19px; color:#5a5344; margin-top:4px; }
+  .tag { display:inline-block; margin-top:10px; padding:4px 14px; border-radius:999px; font-size:17px; font-weight:700; }
+  .tag.gray { background:#e4dcc8; color:#5c5443; }
+  .dos { flex:7; } .dos ul { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:6px 14px; margin-top:3px; }
+  .dos li { font-size:19px; color:#2b2b2b; font-weight:600; display:flex; align-items:center; gap:9px; }
+  .dos li::before { content:"✓"; color:#2e7d4f; font-size:19px; font-weight:700; }
+  .chong { flex:5; display:flex; flex-direction:column; justify-content:center; background:#2a1e22; border-top:3px solid rgba(179,53,44,.55); }
+  .chong::before { content:"冲"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:'SimSun','Noto Serif CJK SC','Microsoft YaHei',serif; font-size:170px; line-height:1; color:rgba(216,176,160,.10); z-index:0; }
+  .chong > * { position:relative; z-index:1; }
+  .chong .label { color:#d59a94; } .chong .val { font-size:36px; font-weight:700; color:#f5efe0; }
+  .chong .dir { margin-top:10px; font-size:20px; color:#e0c0b2; } .chong .dir b { color:#f5efe0; font-size:25px; }
+  .colors { background:#f5efe0; } .colors .groups { display:flex; gap:16px; margin-top:4px; }
+  .cg { flex:1; } .cg .glabel { font-size:19px; font-weight:700; margin-bottom:8px; }
+  .cg .glabel .en { font-weight:400; color:#6f6552; font-size:16px; margin-left:6px; }
+  .swatches { display:flex; gap:8px; } .sw { flex:1; text-align:center; }
+  .sw .dot { height:36px; border-radius:12px; border:2px solid rgba(0,0,0,.2); box-shadow:inset 0 2px 2px rgba(255,255,255,.35), inset 0 -2px 2px rgba(0,0,0,.18), 0 1px 2px rgba(0,0,0,.12); }
+  .sw .nm { font-size:16px; color:#3a352a; margin-top:5px; }
+  .logic { background:#f5efe0; padding:14px 22px; }
+  .logicrows { display:flex; flex-direction:column; gap:7px; }
+  .lrow { display:flex; align-items:center; gap:16px; }
+  .chip { width:92px; height:40px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:700; color:#fff; border:2px solid rgba(0,0,0,.18); box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.15); }
+  .chip.earth { background:#8b5e34; } .chip.metal { background:#9aa0a8; } .chip.metal.on { background:#d4a94e; color:#232635; } .chip.fire { background:#d64545; }
+  .rel { font-size:18px; font-weight:700; color:#4a4436; width:140px; } .cex { font-size:17px; color:#3a352a; }
+  .chip.water { background:#3a5a80; } .chip.wood { background:#2e7d4f; } .chip.wood.on { background:#2e7d4f; box-shadow:0 0 0 2px rgba(212,169,78,.5), inset 0 1px 0 rgba(255,255,255,.25); }
+
+  .chip.water.on { background:#3a5a80; box-shadow:0 0 0 3px rgba(212,169,78,.5); }
+  .donts-in { margin-top:16px; border-top:1px solid rgba(255,255,255,.18); padding-top:12px; }
+  .donts-in .dlabel { font-size:18px; color:#c98f8f; letter-spacing:2px; margin-bottom:8px; }
+  .donts-in ul { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:6px 14px; }
+  .donts-in li { font-size:16px; color:#f5efe0; font-weight:600; display:flex; align-items:center; gap:6px; line-height:1.3; }
+  .donts-in li::before { content:"\2717 "; color:#d64545; font-size:16px; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="canvas">
+<div class="header">
+<div><div class="kicker">ปฏิทินจีน · 黄历</div><div class="title">อังคารที่ 6 ตุลาคม 2569<span class="sub">2026-10-06 · จันทรคติจีนเดือน 8 วันที่ 26</span></div></div>
+<div class="seal"><div class="big cjk">癸丑</div><div class="small">วันน้ำหยิน</div></div>
+</div>
+<div class="row">
+<div class="card hero"><div class="ganzhi cjk">癸丑</div><div class="meta"><div class="zod">วันฉลู (丑)</div><div class="elem">กิ่ง 丑 ดินหยิน · 天干 癸<br><b>น้ำหยิน</b></div></div></div>
+<div class="card lunar"><div class="label">จันทรคติจีน</div><div class="num">8 <span>/ 26</span></div><div class="note">จันทรคติจีนเดือน 8 วันที่ 26</div></div>
+</div>
+<div class="row trio">
+<div class="card"><div class="label">ปี</div><div class="cjk big">丙午</div><div class="th">มะเมีย (ม้า)</div><div class="el">ธาตุไฟหยาง</div></div>
+<div class="card"><div class="label">เดือน</div><div class="cjk big">丁酉</div><div class="th">ระกา (ไก่)</div><div class="el">ธาตุไฟหยิน</div></div>
+<div class="card"><div class="label">ฤกษ์ของวัน</div><div class="th" style="font-size:22;margin-top:2px;">วันธรรมดา</div><div class="el">黑道 · เฮยเต้า</div><div class="tag gray">เลี่ยงเรื่องใหญ่</div></div>
+</div>
+<div class="row"><div class="card dos"><div class="label">ควรทำ</div><ul><li>แต่งงาน</li><li>ต่อรถ ทำยานพาหนะ</li><li>ติดตั้งเครื่องจักร</li><li>ไหว้บรรพบุรุษ บูชา</li><li>ขอพร</li><li>เบิกเนตรพระ วัตถุมงคล</li><li>ตั้งหิ้งพระ กระถางธูป</li><li>ย้ายกระถางธูป</li><li>เดินทาง</li><li>เปิดร้าน เปิดกิจการ</li><li>ทำสัญญา</li><li>ซ่อมแซม ต่อเติม</li><li>ขุดดิน เริ่มก่อสร้าง</li><li>ย้ายบ้าน</li><li>ขึ้นบ้านใหม่</li><li>ขุดหลุมศพ</li></ul></div><div class="card chong"><div class="label">วันชง</div><div class="val">มะแม</div><div class="dir">ทิศซัวะ: <b>ทิศตะวันออก</b></div><div class="donts-in"><div class="dlabel">ไม่ควรทำ</div><ul><li>สู่ขอ หมั้นหมาย</li><li>ตกลงหมั้น ทำข้อตกลง</li><li>ตั้งนั่งร้าน</li><li>ฟ้องร้อง</li><li>ขุดทางน้ำ</li></ul></div></div></div>
+<div class="card colors"><div class="label">สีมงคล (ตามธาตุ 癸 น้ำ Water)</div><div class="groups">
+<div class="cg"><div class="glabel">เสริม</div><div class="swatches"><div class="sw"><div class="dot" style="background:#f2f2f2"></div><div class="nm">ขาว</div></div><div class="sw"><div class="dot" style="background:#d4a94e"></div><div class="nm">ทอง</div></div><div class="sw"><div class="dot" style="background:#b8bcc4"></div><div class="nm">เงิน</div></div></div></div>
+<div class="cg"><div class="glabel">เข้ากัน</div><div class="swatches"><div class="sw"><div class="dot" style="background:#1a1a1a"></div><div class="nm">ดำ</div></div><div class="sw"><div class="dot" style="background:#9fb4c7"></div><div class="nm">น้ำเงิน</div></div></div></div>
+<div class="cg"><div class="glabel">ควรเลี่ยง</div><div class="swatches"><div class="sw"><div class="dot" style="background:#e8c547"></div><div class="nm">เหลือง</div></div><div class="sw"><div class="dot" style="background:#8b5e34"></div><div class="nm">น้ำตาล</div></div></div></div>
+</div></div>
+<div class="card logic"><div class="label">ธาตุของวัน: น้ำ (癸)</div><div class="logicrows">
+<div class="lrow"><div class="chip metal">โลหะ</div><div class="rel">เสริม (มารดา)</div><div class="chip water on">น้ำ</div><div class="cex">ขาว / ทอง / เงิน</div></div>
+<div class="lrow"><div class="chip water">น้ำ</div><div class="rel">เข้ากัน (สหาย)</div><div class="chip water on">น้ำ</div><div class="cex">ดำ / น้ำเงิน</div></div>
+<div class="lrow"><div class="chip earth">ดิน</div><div class="rel">กด (ศัตรู)</div><div class="chip water on">น้ำ</div><div class="cex">เหลือง / น้ำตาล → เลี่ยง</div></div>
+</div></div>
+</div>
+</body>
+</html>

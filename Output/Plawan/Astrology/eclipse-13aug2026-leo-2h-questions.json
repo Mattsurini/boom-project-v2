@@ -1,0 +1,38 @@
+{
+  "topic": "Solar Eclipse 13 Aug 2026 in Leo — impact on BooM (2H)",
+  "eclipse": {
+    "datetime_ict": "2026-08-13T00:30:00+07:00",
+    "degree": 140.033,
+    "sign": "Leo",
+    "natal_house": 2
+  },
+  "phases": {
+    "phase1_establishing_facts": [
+      "What do classical texts (BPHS, Brihat Jataka, Saravali) say about a Solar Eclipse falling in the 2nd house?",
+      "What are the standard interpretations of a Leo solar eclipse in Vedic and Western traditions?",
+      "How does the lack of tight natal planet aspects modify the eclipse interpretation — is a 'quiet' eclipse more structural or more subtle?",
+      "What is the significance of the eclipse ruler (Sun) being in Leo with a stellium (Moon, Mercury, Jupiter)?",
+      "What does Saturn retrograde in the eclipse 11th house indicate for the post-eclipse cycle?"
+    ],
+    "phase2_testing_hypothesis": [
+      "Does the 2nd house eclipse + Leo stellium in the eclipse 3rd house support the hypothesis that BooM's income shift will come through content/communication?",
+      "How does the Node at 29°47' Aquarius (anaretic degree, near Pisces ingress) affect the karmic weight of this eclipse?",
+      "Does Mars in Cancer (eclipse 2H, BooM's natal 1H) indicate an aggressive push to protect self-worth/finances?",
+      "What post-eclipse transit windows (30, 60, 90, 180 days) trigger the 2H-8H axis most strongly?"
+    ],
+    "phase3_adversarial_critical": [
+      "What is the strongest argument that this eclipse will NOT significantly impact BooM's finances?",
+      "Are there eclipses with no natal aspects that historically produced major life changes? What made them work despite no aspects?",
+      "Is a 2nd house eclipse more about internal value shifts than external financial events? What's the counter-argument?",
+      "What blind spots exist in only analyzing the eclipse moment vs. the 6-month eclipse cycle?"
+    ]
+  },
+  "blind_spot_sweep": "Review all provided sources and identify what critical information is MISSING that would be necessary to either prove or disprove that this eclipse marks a major financial/self-worth turning point for BooM. List specific gaps.",
+  "output_targets": {
+    "technical": "Output/Nut/Astrology/eclipse-13aug2026-leo-2h-technical.md",
+    "psychological": "Output/CK/Astrology/eclipse-13aug2026-leo-2h-psychological.md",
+    "audit": "Output/Arm/Astrology/eclipse-13aug2026-leo-2h-audit.md",
+    "critique": "Output/Nan/Astrology/eclipse-13aug2026-leo-2h-critique.md",
+    "convergence": "Output/Bella/Astrology/eclipse-13aug2026-leo-2h-convergence.md"
+  }
+}

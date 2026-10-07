@@ -1,0 +1,15 @@
+{
+  "title": "วิธีดู Transit อย่างง่ายแบบมีหลักฐาน",
+  "slug": "simple-transit-method-notebooklm",
+  "contextNoteTitle": "Context: Simple Transit Reading Method",
+  "contextNote": "เรากำลังสร้างวิธีสอนอ่าน ordinary natal transit แบบง่าย แต่ไม่ overclaim. แยกให้ชัดระหว่าง astronomical/calculated fact, astrological tradition/database interpretation, psychological/application advice และ inference. อย่าสรุปว่า transit เป็นสาเหตุเชิงประจักษ์ของเหตุการณ์. ให้ระบุ source ที่ใช้และช่องว่างของหลักฐาน.",
+  "questions": [
+    {"id":"Q1","phase":"facts","prompt":"จากแหล่งข้อมูลใน notebook อธิบายว่า transit คืออะไร และต้องคำนวณ/ตรวจอะไรบ้างก่อนอ่านเฉพาะบุคคล? แยก calculated fact ออกจาก astrological tradition และใส่ source references."},
+    {"id":"Q2","phase":"method","prompt":"เสนอขั้นตอน beginner-friendly ในการอ่าน transit จาก natal chart: natal target, houses, planets, aspects, orb, applying/exact/separating และ timing. ระบุว่าอะไรเป็นหลักจาก source และอะไรเป็น practical heuristic."},
+    {"id":"Q3","phase":"prioritization","prompt":"ควรจัดลำดับ slow planets, fast planets, major aspects, angles, house rulers, eclipses และ nodes อย่างไรเมื่อข้อมูลเยอะ? ระบุข้อจำกัดและกรณีที่ heuristic นี้ใช้ไม่ได้."},
+    {"id":"Q4","phase":"timing","prompt":"แหล่งข้อมูลสนับสนุนการอ่าน timing อย่างไร โดยเฉพาะ ephemeris, retrograde, repeated hits, station และ exact aspect? ระบุสิ่งที่ไม่ควรคำนวณแบบเดาหรือ linear speed."},
+    {"id":"Q5","phase":"adversarial","prompt":"ตรวจข้อผิดพลาดที่พบบ่อยในการสอนหรือทำนาย transit: deterministic language, fearmongering, generic sign transit, orb เดียวใช้กับทุกกรณี, hard aspect=bad, soft aspect=good และการให้วันแม่นเกินหลักฐาน. เสนอ safeguard ที่ใช้จริง."},
+    {"id":"Q6","phase":"application","prompt":"สร้าง template ภาษาไทยสั้นๆ สำหรับรายงาน transit หนึ่งรายการ โดยแยก calculation fact → symbolic interpretation → practical response → uncertainty. ต้องไม่บอกว่าเหตุการณ์จะเกิดแน่นอน."}
+  ],
+  "blindSpot": "ทำ blind-spot sweep: มีประเด็นสำคัญอะไรในการสร้าง simple transit method ที่คำถามด้านบนยังไม่ครอบคลุม? แยก missing source, unresolved calculation issue, tradition-specific conflict และ recommendation ออกจากกัน พร้อม references."
+}
