@@ -18,6 +18,14 @@ sandboxes/
 *.lock
 *.log
 
+# --- credentials: never in git ---
+# auth.json holds a credential_pool (env var names + sha2 fingerprints, not raw
+# keys, but still machine state). sessions/ request dumps DO embed live
+# Authorization: Bearer <key> headers — 11 of 12 files as of 2026-10-07.
+auth.json
+sessions/
+.hermes_history
+
 # Hermes skill-hub cache + curator runtime state, written into the live skill root
 .agents/skills/.hub/
 .agents/skills/.locks/
