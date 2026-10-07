@@ -1,6 +1,6 @@
 # RESEARCH_FLOWS.md
 
-Auto-generated on 2026-10-06T13:17:12.516780
+Auto-generated on 2026-10-07T09:14:30.057248
 
 Research pipelines showing the full chain from idea to final output.
 
@@ -44,12 +44,12 @@ Research pipelines showing the full chain from idea to final output.
 
 ## astrology
 
-1. **Astrology**: [[Output/Arm/Astrology/20260809-simple-transit-method-audit.md|20260809-simple-transit-method-audit]] () → 
-2. **Astrology**: [[Output/Bella/Astrology/20260809-simple-transit-method-convergence-report.md|20260809-simple-transit-method-convergence-report]] () → 
-3. **Astrology**: [[Output/CK/Astrology/20260809-simple-transit-method-psychological.md|20260809-simple-transit-method-psychological]] () → 
-4. **Astrology**: [[Output/Nan/Astrology/20260809-simple-transit-method-critique.md|20260809-simple-transit-method-critique]] () → 
-5. **Astrology**: [[Output/Nut/Astrology/20260809-simple-transit-method-technical.md|20260809-simple-transit-method-technical]] () → 
-6. **Astrology**: [[Output/Plawan/Astrology/20260809-simple-transit-method-blueprint.md|20260809-simple-transit-method-blueprint]] ()
+1. **Astrology**: [[Output/Plawan/Astrology/20260809-simple-transit-method-blueprint.md|20260809-simple-transit-method-blueprint]] () → 
+2. **Astrology**: [[Output/Nut/Astrology/20260809-simple-transit-method-technical.md|20260809-simple-transit-method-technical]] () → 
+3. **Astrology**: [[Output/Nan/Astrology/20260809-simple-transit-method-critique.md|20260809-simple-transit-method-critique]] () → 
+4. **Astrology**: [[Output/CK/Astrology/20260809-simple-transit-method-psychological.md|20260809-simple-transit-method-psychological]] () → 
+5. **Astrology**: [[Output/Bella/Astrology/20260809-simple-transit-method-convergence-report.md|20260809-simple-transit-method-convergence-report]] () → 
+6. **Astrology**: [[Output/Arm/Astrology/20260809-simple-transit-method-audit.md|20260809-simple-transit-method-audit]] ()
 
 ---
 
@@ -77,20 +77,20 @@ Research pipelines showing the full chain from idea to final output.
 ## eclipse
 
 1. **CK**: [[Output/CK/Astrology/eclipse-13aug2026-leo-2h-psychological.md|eclipse-13aug2026-leo-2h-psychological]] (2026-08-10) → 
-2. **Arm (Audit Researcher)**: [[Output/Arm/Astrology/eclipse-28aug2026-pisces-12rising-audit.md|eclipse-28aug2026-pisces-12rising-audit]] (2026-08-23) → 
-3. **Arm (Audit Researcher)**: [[Output/Arm/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-audit.md|eclipse-28aug2026-pisces-12rising-WESTERN-audit]] (2026-08-23) → 
-4. **Bella (Synthesis/Convergence Report Writer)**: [[Output/Bella/Astrology/eclipse-13aug2026-leo-2h-convergence.md|eclipse-13aug2026-leo-2h-convergence]] (2026-08-10) → 
-5. **Bella (Synthesis/Convergence Report Writer)**: [[Output/Bella/Astrology/eclipse-28aug2026-pisces-12rising-convergence.md|eclipse-28aug2026-pisces-12rising-convergence]] (2026-08-23) → 
-6. **Bella (Synthesis/Convergence Report Writer)**: [[Output/Bella/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-convergence.md|eclipse-28aug2026-pisces-12rising-WESTERN-convergence]] (2026-08-23) → 
-7. **CK (Psychology Research)**: [[Output/CK/Astrology/eclipse-28aug2026-pisces-12rising-psychological.md|eclipse-28aug2026-pisces-12rising-psychological]] (2026-08-23) → 
-8. **CK (Psychology Research)**: [[Output/CK/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-psychological.md|eclipse-28aug2026-pisces-12rising-WESTERN-psychological]] (2026-08-23) → 
-9. **Turboz (BooM Voice rewrite, Western/Tropical corrected)**: [[Output/Client-Readings/eclipse-august-2026-WESTERN-12rising-boomvoice.md|eclipse-august-2026-WESTERN-12rising-boomvoice]] (2026-08-23) → 
-10. **Turboz (corrected Western/Tropical, per BooM request)**: [[Output/Client-Readings/eclipse-august-2026-WESTERN-12rising-corrected.md|eclipse-august-2026-WESTERN-12rising-corrected]] (2026-08-23) → 
-11. **Nan (Research Critic)**: [[Output/Nan/Astrology/eclipse-28aug2026-pisces-12rising-critique.md|eclipse-28aug2026-pisces-12rising-critique]] (2026-08-23) → 
-12. **Nan (Research Critic)**: [[Output/Nan/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-critique.md|eclipse-28aug2026-pisces-12rising-WESTERN-critique]] (2026-08-23) → 
-13. **Nut (Astrology Technical Extractor)**: [[Output/Nut/Astrology/eclipse-28aug2026-pisces-12rising-technical.md|eclipse-28aug2026-pisces-12rising-technical]] (2026-08-23) → 
-14. **Nut (Astrology Technical Extractor)**: [[Output/Nut/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-technical.md|eclipse-28aug2026-pisces-12rising-WESTERN-technical]] (2026-08-23) → 
-15. **Plawan (Idea Generator)**: [[Output/Plawan/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-blueprint.md|eclipse-28aug2026-pisces-12rising-WESTERN-blueprint]] (2026-08-23)
+2. **Turboz (BooM Voice rewrite, Western/Tropical corrected)**: [[Output/Client-Readings/eclipse-august-2026-WESTERN-12rising-boomvoice.md|eclipse-august-2026-WESTERN-12rising-boomvoice]] (2026-08-23) → 
+3. **Turboz (corrected Western/Tropical, per BooM request)**: [[Output/Client-Readings/eclipse-august-2026-WESTERN-12rising-corrected.md|eclipse-august-2026-WESTERN-12rising-corrected]] (2026-08-23) → 
+4. **Plawan (Idea Generator)**: [[Output/Plawan/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-blueprint.md|eclipse-28aug2026-pisces-12rising-WESTERN-blueprint]] (2026-08-23) → 
+5. **Nut (Astrology Technical Extractor)**: [[Output/Nut/Astrology/eclipse-28aug2026-pisces-12rising-technical.md|eclipse-28aug2026-pisces-12rising-technical]] (2026-08-23) → 
+6. **Nut (Astrology Technical Extractor)**: [[Output/Nut/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-technical.md|eclipse-28aug2026-pisces-12rising-WESTERN-technical]] (2026-08-23) → 
+7. **Nan (Research Critic)**: [[Output/Nan/Astrology/eclipse-28aug2026-pisces-12rising-critique.md|eclipse-28aug2026-pisces-12rising-critique]] (2026-08-23) → 
+8. **Nan (Research Critic)**: [[Output/Nan/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-critique.md|eclipse-28aug2026-pisces-12rising-WESTERN-critique]] (2026-08-23) → 
+9. **CK (Psychology Research)**: [[Output/CK/Astrology/eclipse-28aug2026-pisces-12rising-psychological.md|eclipse-28aug2026-pisces-12rising-psychological]] (2026-08-23) → 
+10. **CK (Psychology Research)**: [[Output/CK/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-psychological.md|eclipse-28aug2026-pisces-12rising-WESTERN-psychological]] (2026-08-23) → 
+11. **Bella (Synthesis/Convergence Report Writer)**: [[Output/Bella/Astrology/eclipse-13aug2026-leo-2h-convergence.md|eclipse-13aug2026-leo-2h-convergence]] (2026-08-10) → 
+12. **Bella (Synthesis/Convergence Report Writer)**: [[Output/Bella/Astrology/eclipse-28aug2026-pisces-12rising-convergence.md|eclipse-28aug2026-pisces-12rising-convergence]] (2026-08-23) → 
+13. **Bella (Synthesis/Convergence Report Writer)**: [[Output/Bella/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-convergence.md|eclipse-28aug2026-pisces-12rising-WESTERN-convergence]] (2026-08-23) → 
+14. **Arm (Audit Researcher)**: [[Output/Arm/Astrology/eclipse-28aug2026-pisces-12rising-audit.md|eclipse-28aug2026-pisces-12rising-audit]] (2026-08-23) → 
+15. **Arm (Audit Researcher)**: [[Output/Arm/Astrology/eclipse-28aug2026-pisces-12rising-WESTERN-audit.md|eclipse-28aug2026-pisces-12rising-WESTERN-audit]] (2026-08-23)
 
 ---
 
@@ -154,8 +154,8 @@ Research pipelines showing the full chain from idea to final output.
 29. **Bella**: [[Output/Bella/Astrology/20260809-saturn-retrograde-research-convergence-report.md|20260809-saturn-retrograde-research-convergence-report]] (2026-08-09) → 
 30. **Bella**: [[Output/Bella/Astrology/20260809-transit-reading-principles-convergence-report.md|20260809-transit-reading-principles-convergence-report]] (2026-08-09) → 
 31. **Bella**: [[Output/Bella/Astrology/20260809-transit-reading-principles-source-grounded-convergence-report.md|20260809-transit-reading-principles-source-grounded-convergence-report]] (2026-08-09) → 
-32. **turboz**: [[Output/Arm/scrutiny-hermes-astro-hub-2026-10-05.md|scrutiny-hermes-astro-hub-2026-10-05]] (2026-10-05) → 
-33. **ML-AI**: [[Output/Bella/ML-AI/hermes-best-model-research-2026-08-09.md|hermes-best-model-research-2026-08-09]] (2026-08-09) → 
+32. **turboz**: [[Output/Arm/scrutiny-astro-skills-2026-10-06.md|scrutiny-astro-skills-2026-10-06]] (2026-10-06) → 
+33. **turboz**: [[Output/Arm/scrutiny-hermes-astro-hub-2026-10-05.md|scrutiny-hermes-astro-hub-2026-10-05]] (2026-10-05) → 
 34. **Client-Readings**: [[Output/Client-Readings/client-reading-next-partner-foreign-meeting.md|client-reading-next-partner-foreign-meeting]] (2026-08-21) → 
 35. **NotebookLM**: [[Output/NotebookLM/20260825-planet-position-calculation-western__moved2.md|20260825-planet-position-calculation-western__moved2]] (2026-08-25) → 
 36. **NotebookLM**: [[Output/NotebookLM/20260830-thai-natal-reading-blind-spot__moved2.md|20260830-thai-natal-reading-blind-spot__moved2]] (2026-08-30) → 
@@ -180,11 +180,12 @@ Research pipelines showing the full chain from idea to final output.
 55. **PAC**: [[Output/PAC/pick-a-card-if-we-walk-away-from-this-relationship.md|pick-a-card-if-we-walk-away-from-this-relationship]] () → 
 56. **PAC**: [[Output/PAC/pick-a-card-what-cards-want-to-tell-you.md|pick-a-card-what-cards-want-to-tell-you]] () → 
 57. **PAC**: [[Output/PAC/PICK-A-CARD-เทวดาประจำตัวอยากบอกอะไร-4-กอง.md|PICK-A-CARD-เทวดาประจำตัวอยากบอกอะไร-4-กอง]] () → 
-58. **Astrology**: [[Output/Plawan/Astrology/20260809-simple-transit-method-notebooklm-results.md|20260809-simple-transit-method-notebooklm-results]] (2026-08-09) → 
-59. **Transit**: [[Output/Transit/transit_20260809.md|transit_20260809]] (2026-08-09) → 
-60. **Transit**: [[Output/Transit/transit_20260809_test.md|transit_20260809_test]] (2026-08-09) → 
-61. **Transit**: [[Output/Transit/transit_report_2026.md|transit_report_2026]] (2026-08-09) → 
-62. **Transit**: [[Output/Transit/transit_report_inner.md|transit_report_inner]] (2026-08-09)
+58. **Transit**: [[Output/Transit/transit_20260809.md|transit_20260809]] (2026-08-09) → 
+59. **Transit**: [[Output/Transit/transit_20260809_test.md|transit_20260809_test]] (2026-08-09) → 
+60. **Transit**: [[Output/Transit/transit_report_2026.md|transit_report_2026]] (2026-08-09) → 
+61. **Transit**: [[Output/Transit/transit_report_inner.md|transit_report_inner]] (2026-08-09) → 
+62. **Astrology**: [[Output/Plawan/Astrology/20260809-simple-transit-method-notebooklm-results.md|20260809-simple-transit-method-notebooklm-results]] (2026-08-09) → 
+63. **ML-AI**: [[Output/Bella/ML-AI/hermes-best-model-research-2026-08-09.md|hermes-best-model-research-2026-08-09]] (2026-08-09)
 
 ---
 
@@ -201,12 +202,12 @@ Research pipelines showing the full chain from idea to final output.
 3. **Arm**: [[Output/Arm/ML-AI/deepseek-v4-vs-gpt-5.6-audit.md|deepseek-v4-vs-gpt-5.6-audit]] () → 
 4. **Nan**: [[Output/Nan/ML-AI/deepseek-v4-vs-gpt-5.6-critique.md|deepseek-v4-vs-gpt-5.6-critique]] () → 
 5. **Bella**: [[Output/Bella/ML-AI/deepseek-v4-vs-gpt-5.6-convergence-report.md|deepseek-v4-vs-gpt-5.6-convergence-report]] () → 
-6. **ML-AI**: [[Output/Arm/ML-AI/20260809-hermes-training-audit.md|20260809-hermes-training-audit]] () → 
-7. **ML-AI**: [[Output/Bella/ML-AI/20260809-hermes-training-convergence-report.md|20260809-hermes-training-convergence-report]] () → 
-8. **ML-AI**: [[Output/Nan/ML-AI/20260809-hermes-training-critique.md|20260809-hermes-training-critique]] () → 
-9. **ML-AI**: [[Output/Plawan/ML-AI/20260809-hermes-training-blueprint.md|20260809-hermes-training-blueprint]] () → 
-10. **ML-AI**: [[Output/Sandee/ML-AI/20260809-hermes-training-technical.md|20260809-hermes-training-technical]] () → 
-11. **ML-AI**: [[Output/Sandee/ML-AI/deepseek-v4-vs-gpt-5.6-technical.md|deepseek-v4-vs-gpt-5.6-technical]] ()
+6. **ML-AI**: [[Output/Sandee/ML-AI/20260809-hermes-training-technical.md|20260809-hermes-training-technical]] () → 
+7. **ML-AI**: [[Output/Sandee/ML-AI/deepseek-v4-vs-gpt-5.6-technical.md|deepseek-v4-vs-gpt-5.6-technical]] () → 
+8. **ML-AI**: [[Output/Plawan/ML-AI/20260809-hermes-training-blueprint.md|20260809-hermes-training-blueprint]] () → 
+9. **ML-AI**: [[Output/Nan/ML-AI/20260809-hermes-training-critique.md|20260809-hermes-training-critique]] () → 
+10. **ML-AI**: [[Output/Bella/ML-AI/20260809-hermes-training-convergence-report.md|20260809-hermes-training-convergence-report]] () → 
+11. **ML-AI**: [[Output/Arm/ML-AI/20260809-hermes-training-audit.md|20260809-hermes-training-audit]] ()
 
 ---
 

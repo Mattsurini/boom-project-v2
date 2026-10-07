@@ -1,6 +1,6 @@
 # TOPIC_INDEX.md
 
-Auto-generated on 2026-10-06T13:17:12.516780
+Auto-generated on 2026-10-07T09:14:30.058039
 
 Cross-reference of all files by research topic.
 
@@ -78,7 +78,7 @@ Cross-reference of all files by research topic.
 - 20260731-dk-in-8th-house-soulmate-convergence-report (`Output/Bella/Astrology/20260731-dk-in-8th-house-soulmate-convergence-report.md`) — 2026-07-31
 - 20260731-soulmate-convergence-report (`Output/Bella/Astrology/20260731-soulmate-convergence-report.md`) — 2026-07-31
 
-## general (62 files)
+## general (63 files)
 
 ### Plawan
 - 20260809-retrograde-pipeline-v2-blueprint (`Output/Plawan/Astrology/20260809-retrograde-pipeline-v2-blueprint.md`) — 2026-08-09

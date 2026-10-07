@@ -1,12 +1,13 @@
 # MASTER_INDEX.md
 
-Auto-generated on 2026-10-06T13:17:12.517783
-Total files: 249
+Auto-generated on 2026-10-07T09:14:30.058797
+Total files: 250
 
 Flat chronological list of every file in the system.
 
 ---
 
+- **scrutiny-astro-skills-2026-10-06** | `turboz` | 2026-10-06 | Tags: —
 - **scrutiny-hermes-astro-hub-2026-10-05** | `turboz` | 2026-10-05 | Tags: —
 - **chinese-almanac-report** | `Chinese-Astrology` | 2026-10-03 | Tags: chinese-astrology, huangli, source, scraper
 - **PROJECT_MAP** | `indexes` | 2026-10-03 | Tags: project, navigation, token-economy
@@ -17,14 +18,6 @@ Flat chronological list of every file in the system.
 - **20260901-uranian-astrology-notebooklm-deep-research__moved2** | `NotebookLM` | 2026-09-01 | Tags: astrology, methodology, technical, date:2026-09-01
 - **20260901-uranian-astrology-targeted-qa__moved2** | `NotebookLM` | 2026-09-01 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, technical, date:2026-09-01
 - **transit_20260901** | `Transit` | 2026-09-01 | Tags: transit, astrology, report, psychology, relationships, date:2026-09-01
-- **20260830-thai-natal-reading-audit-v2** | `Arm` | 2026-08-30 | Tags: audit, verification, fact-check, source-validation, astrology, financial-astrology, ml-ai, methodology, critique, convergence, technical, date:2026-08-30
-- **20260830-thai-natal-reading-audit** | `Arm` | 2026-08-30 | Tags: audit, verification, fact-check, source-validation, astrology, financial-astrology, ml-ai, methodology, critique, convergence, technical, date:2026-08-30
-- **20260830-thai-natal-reading-convergence-report-v2** | `Bella` | 2026-08-30 | Tags: convergence, synthesis, report, final-output, astrology, financial-astrology, ml-ai, methodology, critique, technical, date:2026-08-30
-- **20260830-thai-natal-reading-convergence-report** | `Bella` | 2026-08-30 | Tags: convergence, synthesis, report, final-output, astrology, financial-astrology, ml-ai, methodology, critique, technical, date:2026-08-30
-- **20260830-thai-natal-reading-methodology-v2** | `CK` | 2026-08-30 | Tags: research, extraction, psychological, technical, astrology, psychology, financial-astrology, ml-ai, methodology, convergence, date:2026-08-30
-- **20260830-thai-natal-reading-methodology** | `CK` | 2026-08-30 | Tags: research, extraction, psychological, technical, astrology, psychology, financial-astrology, ml-ai, methodology, critique, date:2026-08-30
-- **20260830-thai-natal-reading-critique-v2** | `Nan` | 2026-08-30 | Tags: critique, review, audit, evaluation, astrology, psychology, financial-astrology, ml-ai, methodology, convergence, technical, date:2026-08-30
-- **20260830-thai-natal-reading-critique** | `Nan` | 2026-08-30 | Tags: critique, review, audit, evaluation, astrology, psychology, financial-astrology, ml-ai, methodology, convergence, technical, date:2026-08-30
 - **20260830-thai-natal-reading-blind-spot__moved2** | `NotebookLM` | 2026-08-30 | Tags: astrology, financial-astrology, ml-ai, methodology, critique, convergence, technical, date:2026-08-30
 - **20260830-thai-natal-reading-coverage__moved2** | `NotebookLM` | 2026-08-30 | Tags: astrology, ml-ai, date:2026-08-30
 - **20260830-thai-natal-reading-external-web__moved2** | `NotebookLM` | 2026-08-30 | Tags: astrology, financial-astrology, methodology, technical, date:2026-08-30
@@ -35,18 +28,26 @@ Flat chronological list of every file in the system.
 - **20260830-thai-natal-reading-master-lesson__moved2** | `NotebookLM` | 2026-08-30 | Tags: astrology, date:2026-08-30
 - **20260830-thai-natal-reading-targeted-qa__moved2** | `NotebookLM` | 2026-08-30 | Tags: astrology, ml-ai, methodology, critique, convergence, date:2026-08-30
 - **20260830-thai-taksa-targeted-qa__moved2** | `NotebookLM` | 2026-08-30 | Tags: astrology, technical, date:2026-08-30
+- **thai-natal-reading-blueprint** | `Plawan` | 2026-08-30 | Tags: ideas, questions, blueprint, execution-packet, notebooklm, financial-astrology, ml-ai, methodology, critique, technical
 - **20260830-thai-natal-reading-technical-v2** | `Nut` | 2026-08-30 | Tags: —
 - **20260830-thai-natal-reading-technical** | `Nut` | 2026-08-30 | Tags: astrology, technical-extraction, chart-analysis, psychology, financial-astrology, ml-ai, methodology, critique, convergence, technical, date:2026-08-30
-- **thai-natal-reading-blueprint** | `Plawan` | 2026-08-30 | Tags: ideas, questions, blueprint, execution-packet, notebooklm, financial-astrology, ml-ai, methodology, critique, technical
+- **20260830-thai-natal-reading-critique-v2** | `Nan` | 2026-08-30 | Tags: critique, review, audit, evaluation, astrology, psychology, financial-astrology, ml-ai, methodology, convergence, technical, date:2026-08-30
+- **20260830-thai-natal-reading-critique** | `Nan` | 2026-08-30 | Tags: critique, review, audit, evaluation, astrology, psychology, financial-astrology, ml-ai, methodology, convergence, technical, date:2026-08-30
+- **20260830-thai-natal-reading-methodology-v2** | `CK` | 2026-08-30 | Tags: research, extraction, psychological, technical, astrology, psychology, financial-astrology, ml-ai, methodology, convergence, date:2026-08-30
+- **20260830-thai-natal-reading-methodology** | `CK` | 2026-08-30 | Tags: research, extraction, psychological, technical, astrology, psychology, financial-astrology, ml-ai, methodology, critique, date:2026-08-30
+- **20260830-thai-natal-reading-convergence-report-v2** | `Bella` | 2026-08-30 | Tags: convergence, synthesis, report, final-output, astrology, financial-astrology, ml-ai, methodology, critique, technical, date:2026-08-30
+- **20260830-thai-natal-reading-convergence-report** | `Bella` | 2026-08-30 | Tags: convergence, synthesis, report, final-output, astrology, financial-astrology, ml-ai, methodology, critique, technical, date:2026-08-30
+- **20260830-thai-natal-reading-audit-v2** | `Arm` | 2026-08-30 | Tags: audit, verification, fact-check, source-validation, astrology, financial-astrology, ml-ai, methodology, critique, convergence, technical, date:2026-08-30
+- **20260830-thai-natal-reading-audit** | `Arm` | 2026-08-30 | Tags: audit, verification, fact-check, source-validation, astrology, financial-astrology, ml-ai, methodology, critique, convergence, technical, date:2026-08-30
 - **20260830-thai-natal-reading-insight-v2** | `Astrology Insights` | 2026-08-30 | Tags: —
 - **20260830-thai-natal-reading-insight** | `Astrology Insights` | 2026-08-30 | Tags: —
-- **japanese-divination-methods-audit** | `Arm` | 2026-08-27 | Tags: —
-- **japanese-divination-methods-convergence** | `Bella` | 2026-08-27 | Tags: —
-- **japanese-divination-methods-psychological** | `CK` | 2026-08-27 | Tags: —
-- **japanese-divination-methods-critique** | `Nan` | 2026-08-27 | Tags: —
-- **japanese-divination-methods-technical** | `Nut` | 2026-08-27 | Tags: —
 - **pick-a-card-him-is-he-my-soulmate** | `PAC` | 2026-08-27 | Tags: pac, content, instagram
 - **japanese-divination-methods-blueprint** | `Plawan` | 2026-08-27 | Tags: —
+- **japanese-divination-methods-technical** | `Nut` | 2026-08-27 | Tags: —
+- **japanese-divination-methods-critique** | `Nan` | 2026-08-27 | Tags: —
+- **japanese-divination-methods-psychological** | `CK` | 2026-08-27 | Tags: —
+- **japanese-divination-methods-convergence** | `Bella` | 2026-08-27 | Tags: —
+- **japanese-divination-methods-audit** | `Arm` | 2026-08-27 | Tags: —
 - **20260827-japanese-divination-methods-insight** | `Astrology Insights` | 2026-08-27 | Tags: —
 - **BLIND_TEST_REPORT** | `ML-Astrology-BlindTest` | 2026-08-26 | Tags: boom, astrology, ml, blind-test, statistics
 - **CAREER_PROMISE_TEST** | `ML-Astrology-BlindTest` | 2026-08-26 | Tags: boom, astrology, ml, statistics
@@ -54,93 +55,80 @@ Flat chronological list of every file in the system.
 - **20260825-planet-position-calculation-western__moved2** | `NotebookLM` | 2026-08-25 | Tags: astrology, financial-astrology, ml-ai, methodology, technical, date:2026-08-25
 - **20260825-pac-what-is-he-thinking** | `PAC` | 2026-08-25 | Tags: pac, content, instagram, date:2026-08-25
 - **20260825-horary-astrology-knowledge-extraction-insight** | `Astrology Insights` | 2026-08-25 | Tags: boom, knowledge, astrology, horary, prashna
-- **eclipse-28aug2026-pisces-12rising-audit** | `Arm (Audit Researcher)` | 2026-08-23 | Tags: eclipse, audit, forensics, convergence
-- **eclipse-28aug2026-pisces-12rising-WESTERN-audit** | `Arm (Audit Researcher)` | 2026-08-23 | Tags: eclipse, audit, forensics, western, tropical, convergence
-- **eclipse-28aug2026-pisces-12rising-convergence** | `Bella (Synthesis/Convergence Report Writer)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, pisces, virgo, 12-rising, convergence
-- **eclipse-28aug2026-pisces-12rising-WESTERN-convergence** | `Bella (Synthesis/Convergence Report Writer)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, western, tropical, pisces, virgo, 12-rising, convergence
-- **eclipse-28aug2026-pisces-12rising-psychological** | `CK (Psychology Research)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, pisces, virgo, 12-rising, psychology, convergence
-- **eclipse-28aug2026-pisces-12rising-WESTERN-psychological** | `CK (Psychology Research)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, western, tropical, pisces, virgo, 12-rising, psychology, convergence
 - **eclipse-august-2026-WESTERN-12rising-boomvoice** | `Turboz (BooM Voice rewrite, Western/Tropical corrected)` | 2026-08-23 | Tags: eclipse, solar, lunar, western, tropical, leo, pisces, 12-rising, boomvoice, corrected
 - **eclipse-august-2026-WESTERN-12rising-corrected** | `Turboz (corrected Western/Tropical, per BooM request)` | 2026-08-23 | Tags: eclipse, solar, lunar, western, tropical, leo, pisces, 12-rising, corrected, boomb-voice
 - **lunar-eclipse-28aug2026-WESTERN-12rising-boomvoice** | `Turboz (independent BooM synthesis)` | 2026-08-23 | Tags: lunar-eclipse, eclipse, western, tropical, pisces, virgo, uranus, 12-rising, boomvoice
-- **eclipse-28aug2026-pisces-12rising-critique** | `Nan (Research Critic)` | 2026-08-23 | Tags: eclipse, critique, adversarial, convergence
-- **eclipse-28aug2026-pisces-12rising-WESTERN-critique** | `Nan (Research Critic)` | 2026-08-23 | Tags: eclipse, critique, adversarial, western, tropical, convergence
 - **eclipse-28aug2026-research-brief__moved2** | `NotebookLM` | 2026-08-23 | Tags: astrology, psychology, financial-astrology, technical
-- **eclipse-28aug2026-pisces-12rising-technical** | `Nut (Astrology Technical Extractor)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, pisces, virgo, 12-rising, technical-extraction, convergence
-- **eclipse-28aug2026-pisces-12rising-WESTERN-technical** | `Nut (Astrology Technical Extractor)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, western, tropical, pisces, virgo, 12-rising, technical-extraction, convergence
 - **eclipse-28aug2026-pisces-12rising-blueprint** | `Plawan` | 2026-08-23 | Tags: ideas, questions, blueprint, execution-packet, notebooklm, astrology, ml-ai, methodology, convergence, technical
 - **eclipse-28aug2026-pisces-12rising-WESTERN-blueprint** | `Plawan (Idea Generator)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, western, tropical, pisces, virgo, 12-rising, convergence
+- **eclipse-28aug2026-pisces-12rising-technical** | `Nut (Astrology Technical Extractor)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, pisces, virgo, 12-rising, technical-extraction, convergence
+- **eclipse-28aug2026-pisces-12rising-WESTERN-technical** | `Nut (Astrology Technical Extractor)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, western, tropical, pisces, virgo, 12-rising, technical-extraction, convergence
+- **eclipse-28aug2026-pisces-12rising-critique** | `Nan (Research Critic)` | 2026-08-23 | Tags: eclipse, critique, adversarial, convergence
+- **eclipse-28aug2026-pisces-12rising-WESTERN-critique** | `Nan (Research Critic)` | 2026-08-23 | Tags: eclipse, critique, adversarial, western, tropical, convergence
+- **eclipse-28aug2026-pisces-12rising-psychological** | `CK (Psychology Research)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, pisces, virgo, 12-rising, psychology, convergence
+- **eclipse-28aug2026-pisces-12rising-WESTERN-psychological** | `CK (Psychology Research)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, western, tropical, pisces, virgo, 12-rising, psychology, convergence
+- **eclipse-28aug2026-pisces-12rising-convergence** | `Bella (Synthesis/Convergence Report Writer)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, pisces, virgo, 12-rising, convergence
+- **eclipse-28aug2026-pisces-12rising-WESTERN-convergence** | `Bella (Synthesis/Convergence Report Writer)` | 2026-08-23 | Tags: eclipse, lunar-eclipse, western, tropical, pisces, virgo, 12-rising, convergence
+- **eclipse-28aug2026-pisces-12rising-audit** | `Arm (Audit Researcher)` | 2026-08-23 | Tags: eclipse, audit, forensics, convergence
+- **eclipse-28aug2026-pisces-12rising-WESTERN-audit** | `Arm (Audit Researcher)` | 2026-08-23 | Tags: eclipse, audit, forensics, western, tropical, convergence
+- **pick-a-card-if-we-return-to-love-5-piles-draft-vs-ver1-notes** | `PAC` | 2026-08-23 | Tags: —
 - **20260823-eclipse-13aug2026-leo-TOTAL-verified-insight** | `Astrology Insights` | 2026-08-23 | Tags: eclipse, solar-eclipse, leo, total, saros126, verification, nasa, western, tropical, 12-rising, correction
 - **20260823-eclipse-2026-08-28-pisces-12rising-insight** | `Astrology Insights` | 2026-08-23 | Tags: eclipse, lunar-eclipse, pisces, aquarius-sidereal, 12-rising, node-axis, culmination, convergence, notebooklm-backed
 - **20260823-eclipse-2026-08-28-pisces-WESTERN-12rising-insight** | `Astrology Insights` | 2026-08-23 | Tags: eclipse, lunar-eclipse, western, tropical, pisces, virgo, 12-rising, convergence, notebooklm-backed
-- **pick-a-card-if-we-return-to-love-5-piles-draft-vs-ver1-notes** | `PAC` | 2026-08-23 | Tags: —
 - **client-reading-next-partner-foreign-meeting** | `Client-Readings` | 2026-08-21 | Tags: —
 - **research-pipeline-explained** | `Plawan` | 2026-08-21 | Tags: ideas, questions, blueprint, execution-packet, notebooklm, astrology, psychology, financial-astrology, ml-ai, methodology, critique, convergence, technical
 - **20260815-eclipse-13aug2026-pisces-6th-house-execution-packet** | `Plawan` | 2026-08-15 | Tags: ideas, notebooklm, blueprint, execution-packet, eclipse, astrology, methodology, questions, date:2026-08-15
 - **20260815-eclipse-pisces-6h-blueprint** | `Idea Generator` | 2026-08-15 | Tags: ideas, blueprint, notebooklm, astrology, eclipse, pisces-ascendant, 6th-house, research-design
-- **eclipse-13aug2026-leo-2h-audit** | `Arm` | 2026-08-10 | Tags: audit, verification, fact-check, source-validation, astrology, methodology, critique, convergence, technical
-- **eclipse-13aug2026-leo-2h-convergence** | `Bella (Synthesis/Convergence Report Writer)` | 2026-08-10 | Tags: eclipse, solar-eclipse, leo, cancer-sidereal, 2nd-house, 1st-house, self-worth, financial-reset, convergence
-- **eclipse-13aug2026-leo-2h-psychological** | `CK` | 2026-08-10 | Tags: eclipse, solar-eclipse, leo, 2nd-house, self-worth, financial-identity, psychology, date:2026-08-10
-- **eclipse-13aug2026-leo-2h-critique** | `Nan` | 2026-08-10 | Tags: critique, review, audit, evaluation, astrology, psychology, financial-astrology, ml-ai, methodology, convergence, technical
 - **eclipse-13aug2026-notebooklm-deep-research__moved2** | `NotebookLM` | 2026-08-10 | Tags: astrology, psychology, relationships, financial-astrology, ml-ai, methodology, critique, convergence, technical
-- **eclipse-13aug2026-leo-2h-technical** | `Nut` | 2026-08-10 | Tags: astrology, technical-extraction, chart-analysis, psychology, relationships, financial-astrology, ml-ai, methodology, critique, convergence, technical
 - **eclipse-13aug2026-leo-2h-blueprint** | `Plawan` | 2026-08-10 | Tags: ideas, questions, blueprint, execution-packet, notebooklm, astrology, ml-ai, methodology
+- **eclipse-13aug2026-leo-2h-technical** | `Nut` | 2026-08-10 | Tags: astrology, technical-extraction, chart-analysis, psychology, relationships, financial-astrology, ml-ai, methodology, critique, convergence, technical
+- **eclipse-13aug2026-leo-2h-critique** | `Nan` | 2026-08-10 | Tags: critique, review, audit, evaluation, astrology, psychology, financial-astrology, ml-ai, methodology, convergence, technical
+- **eclipse-13aug2026-leo-2h-psychological** | `CK` | 2026-08-10 | Tags: eclipse, solar-eclipse, leo, 2nd-house, self-worth, financial-identity, psychology, date:2026-08-10
+- **eclipse-13aug2026-leo-2h-convergence** | `Bella (Synthesis/Convergence Report Writer)` | 2026-08-10 | Tags: eclipse, solar-eclipse, leo, cancer-sidereal, 2nd-house, 1st-house, self-worth, financial-reset, convergence
+- **eclipse-13aug2026-leo-2h-audit** | `Arm` | 2026-08-10 | Tags: audit, verification, fact-check, source-validation, astrology, methodology, critique, convergence, technical
 - **20260810-eclipse-aug2026-leo-2h-insight** | `Astrology Insights` | 2026-08-10 | Tags: eclipse, solar-eclipse, leo, cancer-sidereal, 2nd-house, 1st-house, self-worth, finance, convergence
-- **20260809-retrograde-pipeline-v2-audit** | `Arm` | 2026-08-09 | Tags: astrology, methodology, convergence, date:2026-08-09
-- **20260809-retrograde-research-audit** | `Arm` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, critique, date:2026-08-09
-- **20260809-saturn-retrograde-research-audit** | `Arm` | 2026-08-09 | Tags: astrology, relationships, financial-astrology, methodology, convergence, technical, date:2026-08-09
-- **20260809-transit-reading-principles-audit** | `Arm` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, convergence, technical, date:2026-08-09
-- **20260809-transit-reading-principles-source-grounded-audit** | `Arm` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, technical, date:2026-08-09
-- **20260809-retrograde-pipeline-v2-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, technical, date:2026-08-09
-- **20260809-retrograde-research-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, critique, convergence, date:2026-08-09
-- **20260809-saturn-retrograde-research-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, technical, date:2026-08-09
-- **20260809-transit-reading-principles-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, technical, date:2026-08-09
-- **20260809-transit-reading-principles-source-grounded-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, convergence, technical, date:2026-08-09
-- **hermes-best-model-research-2026-08-09** | `ML-AI` | 2026-08-09 | Tags: —
-- **20260809-retrograde-pipeline-v2-psychological-extraction** | `CK` | 2026-08-09 | Tags: psychology, relationships, methodology, critique, convergence, date:2026-08-09
-- **20260809-retrograde-research-psychological-extraction** | `CK` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, date:2026-08-09
-- **20260809-saturn-retrograde-research-psychological-extraction** | `CK` | 2026-08-09 | Tags: psychology, relationships, methodology, convergence, date:2026-08-09
-- **20260809-transit-reading-principles-psychological-extraction** | `CK` | 2026-08-09 | Tags: astrology, relationships, financial-astrology, convergence, date:2026-08-09
-- **20260809-transit-reading-principles-source-grounded-psychological-extraction** | `CK` | 2026-08-09 | Tags: astrology, financial-astrology, date:2026-08-09
-- **20260809-retrograde-pipeline-v2-critique** | `Nan` | 2026-08-09 | Tags: astrology, psychology, financial-astrology, methodology, critique, convergence, date:2026-08-09
-- **20260809-retrograde-research-critique** | `Nan` | 2026-08-09 | Tags: astrology, psychology, financial-astrology, methodology, critique, date:2026-08-09
-- **20260809-saturn-retrograde-research-critique** | `Nan` | 2026-08-09 | Tags: astrology, psychology, financial-astrology, methodology, critique, convergence, date:2026-08-09
-- **20260809-transit-reading-principles-critique** | `Nan` | 2026-08-09 | Tags: astrology, financial-astrology, critique, convergence, date:2026-08-09
-- **20260809-transit-reading-principles-source-grounded-critique** | `Nan` | 2026-08-09 | Tags: astrology, financial-astrology, critique, convergence, technical, date:2026-08-09
 - **20260809-simple-transit-method-notebooklm-notebooklm-results__moved2** | `Plawan` | 2026-08-09 | Tags: ideas, questions, blueprint, execution-packet, notebooklm, astrology, psychology, relationships, financial-astrology, ml-ai, methodology, critique, convergence, technical, date:2026-08-09
-- **20260809-retrograde-pipeline-v2-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, relationships, financial-astrology, methodology, critique, date:2026-08-09
-- **20260809-retrograde-research-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, critique, convergence, date:2026-08-09
-- **20260809-saturn-retrograde-research-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, technical, date:2026-08-09
-- **20260809-transit-reading-principles-source-grounded-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, convergence, date:2026-08-09
-- **20260809-transit-reading-principles-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, convergence, technical, date:2026-08-09
-- **README** | `Chinese-Astrology` | 2026-08-09 | Tags: pac, chinese-astrology, bazi, ziwei, huangli, content
+- **transit_20260809** | `Transit` | 2026-08-09 | Tags: astrology, psychology, relationships, date:2026-08-09
+- **transit_20260809_test** | `Transit` | 2026-08-09 | Tags: astrology, psychology, relationships, date:2026-08-09
+- **transit_report_2026** | `Transit` | 2026-08-09 | Tags: astrology, psychology, relationships
+- **transit_report_inner** | `Transit` | 2026-08-09 | Tags: astrology, psychology, relationships
 - **20260809-retrograde-pipeline-v2-blueprint** | `Plawan` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, critique, date:2026-08-09
 - **20260809-retrograde-research-blueprint** | `Plawan` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, critique, convergence, date:2026-08-09
 - **20260809-saturn-retrograde-research-blueprint** | `Plawan` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, convergence, date:2026-08-09
 - **20260809-simple-transit-method-notebooklm-results** | `Astrology` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, ml-ai, methodology, critique, convergence, technical, date:2026-08-09
 - **20260809-transit-reading-principles-blueprint** | `Plawan` | 2026-08-09 | Tags: astrology, financial-astrology, date:2026-08-09
 - **20260809-transit-reading-principles-source-grounded-blueprint** | `Plawan` | 2026-08-09 | Tags: astrology, convergence, technical, date:2026-08-09
-- **transit_20260809** | `Transit` | 2026-08-09 | Tags: astrology, psychology, relationships, date:2026-08-09
-- **transit_20260809_test** | `Transit` | 2026-08-09 | Tags: astrology, psychology, relationships, date:2026-08-09
-- **transit_report_2026** | `Transit` | 2026-08-09 | Tags: astrology, psychology, relationships
-- **transit_report_inner** | `Transit` | 2026-08-09 | Tags: astrology, psychology, relationships
+- **README** | `Chinese-Astrology` | 2026-08-09 | Tags: pac, chinese-astrology, bazi, ziwei, huangli, content
+- **20260809-retrograde-pipeline-v2-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, relationships, financial-astrology, methodology, critique, date:2026-08-09
+- **20260809-retrograde-research-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, critique, convergence, date:2026-08-09
+- **20260809-saturn-retrograde-research-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, technical, date:2026-08-09
+- **20260809-transit-reading-principles-source-grounded-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, convergence, date:2026-08-09
+- **20260809-transit-reading-principles-technical-extraction** | `Nut` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, convergence, technical, date:2026-08-09
+- **20260809-retrograde-pipeline-v2-critique** | `Nan` | 2026-08-09 | Tags: astrology, psychology, financial-astrology, methodology, critique, convergence, date:2026-08-09
+- **20260809-retrograde-research-critique** | `Nan` | 2026-08-09 | Tags: astrology, psychology, financial-astrology, methodology, critique, date:2026-08-09
+- **20260809-saturn-retrograde-research-critique** | `Nan` | 2026-08-09 | Tags: astrology, psychology, financial-astrology, methodology, critique, convergence, date:2026-08-09
+- **20260809-transit-reading-principles-critique** | `Nan` | 2026-08-09 | Tags: astrology, financial-astrology, critique, convergence, date:2026-08-09
+- **20260809-transit-reading-principles-source-grounded-critique** | `Nan` | 2026-08-09 | Tags: astrology, financial-astrology, critique, convergence, technical, date:2026-08-09
+- **20260809-retrograde-pipeline-v2-psychological-extraction** | `CK` | 2026-08-09 | Tags: psychology, relationships, methodology, critique, convergence, date:2026-08-09
+- **20260809-retrograde-research-psychological-extraction** | `CK` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, date:2026-08-09
+- **20260809-saturn-retrograde-research-psychological-extraction** | `CK` | 2026-08-09 | Tags: psychology, relationships, methodology, convergence, date:2026-08-09
+- **20260809-transit-reading-principles-psychological-extraction** | `CK` | 2026-08-09 | Tags: astrology, relationships, financial-astrology, convergence, date:2026-08-09
+- **20260809-transit-reading-principles-source-grounded-psychological-extraction** | `CK` | 2026-08-09 | Tags: astrology, financial-astrology, date:2026-08-09
+- **20260809-retrograde-pipeline-v2-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, technical, date:2026-08-09
+- **20260809-retrograde-research-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, critique, convergence, date:2026-08-09
+- **20260809-saturn-retrograde-research-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, technical, date:2026-08-09
+- **20260809-transit-reading-principles-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, psychology, relationships, financial-astrology, methodology, critique, convergence, technical, date:2026-08-09
+- **20260809-transit-reading-principles-source-grounded-convergence-report** | `Bella` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, convergence, technical, date:2026-08-09
+- **hermes-best-model-research-2026-08-09** | `ML-AI` | 2026-08-09 | Tags: —
+- **20260809-retrograde-pipeline-v2-audit** | `Arm` | 2026-08-09 | Tags: astrology, methodology, convergence, date:2026-08-09
+- **20260809-retrograde-research-audit** | `Arm` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, critique, date:2026-08-09
+- **20260809-saturn-retrograde-research-audit** | `Arm` | 2026-08-09 | Tags: astrology, relationships, financial-astrology, methodology, convergence, technical, date:2026-08-09
+- **20260809-transit-reading-principles-audit** | `Arm` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, convergence, technical, date:2026-08-09
+- **20260809-transit-reading-principles-source-grounded-audit** | `Arm` | 2026-08-09 | Tags: astrology, financial-astrology, methodology, technical, date:2026-08-09
 - **index** | `Astrology-Database` | 2026-08-09 | Tags: boom, knowledge, astrology, astrology
 - **readme** | `Astrology-Database` | 2026-08-09 | Tags: boom, knowledge, astrology, astrology
-- **readme** | `#Articles` | 2026-08-09 | Tags: boom, knowledge, astrology, astrology
 - **README** | `Chinese-Astrology` | 2026-08-09 | Tags: astrology, chinese-astrology, bazi, ziwei, huangli, pac
-- **README** | `BaZi` | 2026-08-09 | Tags: astrology, chinese-astrology, bazi, four-pillars, timing
-- **README** | `HuangLi` | 2026-08-09 | Tags: astrology, chinese-astrology, huangli, almanac, electional, pac
-- **source-map** | `References` | 2026-08-09 | Tags: astrology, chinese-astrology, sources, citation-policy
-- **README** | `ZiWei` | 2026-08-09 | Tags: astrology, chinese-astrology, ziwei, purple-star, natal
-- **20260809-saturn-retrograde-insight** | `Astrology Insights` | 2026-08-09 | Tags: boom, knowledge, astrology, convergence
-- **20260809-simple-transit-method-insight** | `Astrology Insights` | 2026-08-09 | Tags: astrology, transit, natal, timing, method
-- **20260809-transit-reading-principles-insight** | `Astrology Insights` | 2026-08-09 | Tags: boom, knowledge, astrology, convergence
-- **20260809-transit-reading-principles-source-grounded-insight** | `Astrology Insights` | 2026-08-09 | Tags: boom, knowledge, astrology, convergence
-- **README** | `Astrology Insights` | 2026-08-09 | Tags: boom, knowledge, astrology, convergence
-- **20260809-deepseek-v4-vs-gpt-5.6-insight** | `ML-AI Insights` | 2026-08-09 | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
-- **20260809-hermes-training-insight** | `ML-AI Insights` | 2026-08-09 | Tags: ml-ai, hermes, agent-improvement, evaluation, fine-tuning
-- **README** | `ML-AI Insights` | 2026-08-09 | Tags: boom, knowledge, ml-ai, insight
-- **README** | `Applications` | 2026-08-09 | Tags: boom, knowledge, psychology
+- **README** | `duplicates` | 2026-08-09 | Tags: boom, knowledge, archive
 - **Style-Profile** | `BooM` | 2026-08-09 | Tags: boom, writing-style, client-reading, pick-a-card, long-form
 - **client-reading-action-assessment** | `Client-Readings` | 2026-08-09 | Tags: boom, writing-style, client-reading, tarot, relationship
 - **client-reading-career-burnout** | `Client-Readings` | 2026-08-09 | Tags: boom, writing-style, client-reading, tarot, career, burnout, compassion
@@ -154,14 +142,21 @@ Flat chronological list of every file in the system.
 - **pick-a-card-meaning-to-him-partial** | `Raw-Samples` | 2026-08-09 | Tags: boom, writing-style, pick-a-card, relationship, feelings, significance
 - **pick-a-card-regret-after-separation-partial** | `Raw-Samples` | 2026-08-09 | Tags: boom, writing-style, pick-a-card, relationship, regret, separation
 - **pick-a-card-relationship-5-piles** | `Raw-Samples` | 2026-08-09 | Tags: boom, writing-style, pick-a-card, relationship, tarot, thai
-- **README** | `duplicates` | 2026-08-09 | Tags: boom, knowledge, archive
+- **README** | `Applications` | 2026-08-09 | Tags: boom, knowledge, psychology
+- **20260809-saturn-retrograde-insight** | `Astrology Insights` | 2026-08-09 | Tags: boom, knowledge, astrology, convergence
+- **20260809-simple-transit-method-insight** | `Astrology Insights` | 2026-08-09 | Tags: astrology, transit, natal, timing, method
+- **20260809-transit-reading-principles-insight** | `Astrology Insights` | 2026-08-09 | Tags: boom, knowledge, astrology, convergence
+- **20260809-transit-reading-principles-source-grounded-insight** | `Astrology Insights` | 2026-08-09 | Tags: boom, knowledge, astrology, convergence
+- **README** | `Astrology Insights` | 2026-08-09 | Tags: boom, knowledge, astrology, convergence
+- **20260809-deepseek-v4-vs-gpt-5.6-insight** | `ML-AI Insights` | 2026-08-09 | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
+- **20260809-hermes-training-insight** | `ML-AI Insights` | 2026-08-09 | Tags: ml-ai, hermes, agent-improvement, evaluation, fine-tuning
+- **README** | `ML-AI Insights` | 2026-08-09 | Tags: boom, knowledge, ml-ai, insight
+- **README** | `BaZi` | 2026-08-09 | Tags: astrology, chinese-astrology, bazi, four-pillars, timing
+- **README** | `HuangLi` | 2026-08-09 | Tags: astrology, chinese-astrology, huangli, almanac, electional, pac
+- **source-map** | `References` | 2026-08-09 | Tags: astrology, chinese-astrology, sources, citation-policy
+- **README** | `ZiWei` | 2026-08-09 | Tags: astrology, chinese-astrology, ziwei, purple-star, natal
+- **readme** | `#Articles` | 2026-08-09 | Tags: boom, knowledge, astrology, astrology
 - **20260808-pac-the-week-everything-shifts** | `PAC` | 2026-08-08 | Tags: astrology, relationships, date:2026-08-08
-- **20260801-relationship-good-or-bad-audit** | `Arm` | 2026-08-01 | Tags: verification, critique, audit, technical, relationships, financial-astrology, convergence, date:2026-08-01, psychology, source-validation, methodology, astrology, fact-check
-- **20260801-relationship-good-or-bad-convergence-report** | `Bella` | 2026-08-01 | Tags: final-output, synthesis, report, critique, technical, relationships, convergence, financial-astrology, date:2026-08-01, psychology, methodology, astrology
-- **20260801-relationship-good-or-bad-psychological-extraction** | `CK` | 2026-08-01 | Tags: critique, psychological, technical, research, relationships, financial-astrology, convergence, date:2026-08-01, psychology, extraction, methodology, astrology
-- **20260801-relationship-good-or-bad-critique** | `Nan` | 2026-08-01 | Tags: review, critique, audit, technical, relationships, financial-astrology, convergence, date:2026-08-01, psychology, evaluation, methodology, astrology
-- **20260801-relationship-good-or-bad-technical-extraction** | `Nut` | 2026-08-01 | Tags: chart-analysis, critique, technical, relationships, financial-astrology, technical-extraction, convergence, psychology, date:2026-08-01, methodology, astrology
-- **20260801-Testing-Jaimini-Chara-Dasha-for-Timing-Marriage** | `Nut` | 2026-08-01 | Tags: astrology, technical-extraction, chart-analysis, relationships, financial-astrology, methodology, critique, date:2026-08-01
 - **20260801-basic-western-astrology-blueprint** | `Plawan` | 2026-08-01 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, technical, relationships, financial-astrology, convergence, date:2026-08-01, psychology, questions, methodology, astrology
 - **20260801-basic-western-astrology-execution-packet** | `Plawan` | 2026-08-01 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, technical, relationships, financial-astrology, date:2026-08-01, psychology, questions, methodology, astrology
 - **20260801-dk-in-8th-house-finding-soulmate-notebooklm-results** | `Plawan` | 2026-08-01 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, technical, relationships, financial-astrology, date:2026-08-01, psychology, questions, methodology, astrology
@@ -170,9 +165,19 @@ Flat chronological list of every file in the system.
 - **20260801-relationship-good-or-bad-blueprint** | `Plawan` | 2026-08-01 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, technical, relationships, financial-astrology, convergence, date:2026-08-01, psychology, questions, methodology, astrology
 - **20260801-relationship-good-or-bad-execution-packet** | `Plawan` | 2026-08-01 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, technical, relationships, convergence, date:2026-08-01, psychology, questions, methodology, astrology
 - **20260801-relationship-good-or-bad-notebooklm-results** | `Plawan` | 2026-08-01 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, technical, relationships, financial-astrology, convergence, date:2026-08-01, psychology, questions, methodology, astrology
+- **20260801-relationship-good-or-bad-technical-extraction** | `Nut` | 2026-08-01 | Tags: chart-analysis, critique, technical, relationships, financial-astrology, technical-extraction, convergence, psychology, date:2026-08-01, methodology, astrology
+- **20260801-Testing-Jaimini-Chara-Dasha-for-Timing-Marriage** | `Nut` | 2026-08-01 | Tags: astrology, technical-extraction, chart-analysis, relationships, financial-astrology, methodology, critique, date:2026-08-01
+- **20260801-relationship-good-or-bad-critique** | `Nan` | 2026-08-01 | Tags: review, critique, audit, technical, relationships, financial-astrology, convergence, date:2026-08-01, psychology, evaluation, methodology, astrology
+- **20260801-relationship-good-or-bad-psychological-extraction** | `CK` | 2026-08-01 | Tags: critique, psychological, technical, research, relationships, financial-astrology, convergence, date:2026-08-01, psychology, extraction, methodology, astrology
+- **20260801-relationship-good-or-bad-convergence-report** | `Bella` | 2026-08-01 | Tags: final-output, synthesis, report, critique, technical, relationships, convergence, financial-astrology, date:2026-08-01, psychology, methodology, astrology
+- **20260801-relationship-good-or-bad-audit** | `Arm` | 2026-08-01 | Tags: verification, critique, audit, technical, relationships, financial-astrology, convergence, date:2026-08-01, psychology, source-validation, methodology, astrology, fact-check
 - **jaimini_astrology** | `Astrology-Database` | 2026-08-01 | Tags: astrology, knowledge-base, scan-only
 - **PAC DARES kn rao** | `Astrology-Database` | 2026-08-01 | Tags: astrology, knowledge-base, scan-only
 - **Sarvartha-Chintamani-JN-Bhasin_compressed** | `Astrology-Database` | 2026-08-01 | Tags: astrology, knowledge-base, scan-only
+- **index** | `Convergence-Database` | 2026-08-01 | Tags: convergence, knowledge-base
+- **index** | `Psychology-Database` | 2026-08-01 | Tags: psychology, knowledge-base
+- **20260801-relationship-good-or-bad-climate-layer** | `Applications` | 2026-08-01 | Tags: psychology, knowledge-base
+- **20260801-relationship-good-or-bad-two-axis-model** | `Astrology Insights` | 2026-08-01 | Tags: convergence, knowledge-base
 - **README** | `Articles` | 2026-08-01 | Tags: astrology, knowledge-base, scan-only
 - **README** | `Chart-Collections` | 2026-08-01 | Tags: astrology, knowledge-base, scan-only
 - **README** | `Financial` | 2026-08-01 | Tags: astrology, knowledge-base, scan-only
@@ -209,50 +214,46 @@ Flat chronological list of every file in the system.
 - **Vrash-Lagn-Ka-Faladesh-Astrology** | `Vedic-Classics` | 2026-08-01 | Tags: astrology, knowledge-base, scan-only
 - **भारतीय ज्योतिष bhartiya jyotish** | `Vedic-Classics` | 2026-08-01 | Tags: astrology, knowledge-base, scan-only
 - **README** | `Western` | 2026-08-01 | Tags: astrology, knowledge-base, scan-only
-- **index** | `Convergence-Database` | 2026-08-01 | Tags: convergence, knowledge-base
-- **20260801-relationship-good-or-bad-two-axis-model** | `Astrology Insights` | 2026-08-01 | Tags: convergence, knowledge-base
-- **index** | `Psychology-Database` | 2026-08-01 | Tags: psychology, knowledge-base
-- **20260801-relationship-good-or-bad-climate-layer** | `Applications` | 2026-08-01 | Tags: psychology, knowledge-base
-- **20260731-dk-in-8th-house-soulmate-audit-report** | `Arm` | 2026-07-31 | Tags: verification, critique, audit, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, source-validation, methodology, astrology, fact-check
-- **20260731-soulmate-audit-report** | `Arm` | 2026-07-31 | Tags: verification, critique, audit, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, source-validation, methodology, astrology, fact-check
-- **20260731-dk-in-8th-house-soulmate-convergence-report** | `Bella` | 2026-07-31 | Tags: final-output, synthesis, report, critique, technical, date:2026-07-31, relationships, convergence, financial-astrology, psychology, methodology, astrology
-- **20260731-soulmate-convergence-report** | `Bella` | 2026-07-31 | Tags: final-output, synthesis, report, critique, date:2026-07-31, relationships, convergence, financial-astrology, psychology, methodology, astrology
-- **20260731-dk-in-8th-house-soulmate-psychological-extraction** | `CK` | 2026-07-31 | Tags: critique, psychological, technical, date:2026-07-31, research, relationships, financial-astrology, convergence, psychology, extraction, methodology, astrology
-- **20260731-soulmate-psychological-extraction** | `CK` | 2026-07-31 | Tags: critique, psychological, technical, date:2026-07-31, research, relationships, financial-astrology, convergence, psychology, extraction, methodology, astrology
-- **20260731-dk-in-8th-house-soulmate-critic-report** | `Nan` | 2026-07-31 | Tags: review, critique, audit, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, evaluation, methodology, astrology
-- **20260731-soulmate-critic-report** | `Nan` | 2026-07-31 | Tags: review, critique, audit, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, evaluation, methodology, astrology
-- **20260731-dk-in-8th-house-soulmate-technical-extraction** | `Nut` | 2026-07-31 | Tags: chart-analysis, critique, technical, date:2026-07-31, relationships, financial-astrology, technical-extraction, convergence, psychology, methodology, astrology
-- **20260731-soulmate-technical-extraction** | `Nut` | 2026-07-31 | Tags: chart-analysis, critique, technical, date:2026-07-31, relationships, financial-astrology, technical-extraction, convergence, astrology
 - **20260731-dk-in-8th-house-finding-soulmate-blueprint** | `Plawan` | 2026-07-31 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, questions, methodology, astrology
 - **20260731-dk-in-8th-house-finding-soulmate-execution-packet** | `Plawan` | 2026-07-31 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, date:2026-07-31, relationships, financial-astrology, convergence, psychology, questions, methodology, astrology
 - **20260731-dk-in-8th-house-finding-soulmate-notebooklm-results** | `Plawan` | 2026-07-31 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, questions, methodology, astrology
 - **20260731-soulmate-notebooklm-execution-packet** | `Plawan` | 2026-07-31 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, date:2026-07-31, relationships, financial-astrology, psychology, questions, astrology
 - **20260731-vedic-astrology-finding-soulmate-blueprint** | `Plawan` | 2026-07-31 | Tags: ideas, notebooklm, blueprint, critique, execution-packet, technical, date:2026-07-31, relationships, financial-astrology, psychology, questions, methodology, astrology
-- **20260731-dk-in-8th-house-terrain-card** | `Jaimini` | 2026-07-31 | Tags: boom, knowledge, astrology, jaimini
-- **20260731-soulmate-three-layer-marriage-framework** | `Jaimini` | 2026-07-31 | Tags: boom, knowledge, astrology, jaimini
-- **20260731-chart-describes-terrain-soulmate-is-built** | `Astrology Insights` | 2026-07-31 | Tags: convergence, knowledge-base
-- **20260731-dk-in-8th-terrain-depth-not-destiny** | `Astrology Insights` | 2026-07-31 | Tags: convergence, knowledge-base
+- **20260731-dk-in-8th-house-soulmate-technical-extraction** | `Nut` | 2026-07-31 | Tags: chart-analysis, critique, technical, date:2026-07-31, relationships, financial-astrology, technical-extraction, convergence, psychology, methodology, astrology
+- **20260731-soulmate-technical-extraction** | `Nut` | 2026-07-31 | Tags: chart-analysis, critique, technical, date:2026-07-31, relationships, financial-astrology, technical-extraction, convergence, astrology
+- **20260731-dk-in-8th-house-soulmate-critic-report** | `Nan` | 2026-07-31 | Tags: review, critique, audit, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, evaluation, methodology, astrology
+- **20260731-soulmate-critic-report** | `Nan` | 2026-07-31 | Tags: review, critique, audit, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, evaluation, methodology, astrology
+- **20260731-dk-in-8th-house-soulmate-psychological-extraction** | `CK` | 2026-07-31 | Tags: critique, psychological, technical, date:2026-07-31, research, relationships, financial-astrology, convergence, psychology, extraction, methodology, astrology
+- **20260731-soulmate-psychological-extraction** | `CK` | 2026-07-31 | Tags: critique, psychological, technical, date:2026-07-31, research, relationships, financial-astrology, convergence, psychology, extraction, methodology, astrology
+- **20260731-dk-in-8th-house-soulmate-convergence-report** | `Bella` | 2026-07-31 | Tags: final-output, synthesis, report, critique, technical, date:2026-07-31, relationships, convergence, financial-astrology, psychology, methodology, astrology
+- **20260731-soulmate-convergence-report** | `Bella` | 2026-07-31 | Tags: final-output, synthesis, report, critique, date:2026-07-31, relationships, convergence, financial-astrology, psychology, methodology, astrology
+- **20260731-dk-in-8th-house-soulmate-audit-report** | `Arm` | 2026-07-31 | Tags: verification, critique, audit, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, source-validation, methodology, astrology, fact-check
+- **20260731-soulmate-audit-report** | `Arm` | 2026-07-31 | Tags: verification, critique, audit, technical, date:2026-07-31, relationships, financial-astrology, convergence, psychology, source-validation, methodology, astrology, fact-check
 - **20260731-intensity-and-karmic-framing-amplify-fit** | `Applications` | 2026-07-31 | Tags: psychology, knowledge-base
 - **20260731-soulmate-belief-fit-interaction** | `Applications` | 2026-07-31 | Tags: psychology, knowledge-base
-- **20260809-simple-transit-method-audit** | `Astrology` |  | Tags: —
-- **20260809-hermes-training-audit** | `ML-AI` |  | Tags: —
-- **deepseek-v4-vs-gpt-5.6-audit** | `Arm` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
-- **20260809-simple-transit-method-convergence-report** | `Astrology` |  | Tags: —
-- **20260809-hermes-training-convergence-report** | `ML-AI` |  | Tags: —
-- **deepseek-v4-vs-gpt-5.6-convergence-report** | `Bella` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
-- **20260809-simple-transit-method-psychological** | `Astrology` |  | Tags: —
-- **deepseek-v4-vs-gpt-5.6-impact** | `CK` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
-- **20260809-simple-transit-method-critique** | `Astrology` |  | Tags: —
-- **20260809-hermes-training-critique** | `ML-AI` |  | Tags: —
-- **deepseek-v4-vs-gpt-5.6-critique** | `Nan` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
-- **20260809-simple-transit-method-technical** | `Astrology` |  | Tags: —
+- **20260731-chart-describes-terrain-soulmate-is-built** | `Astrology Insights` | 2026-07-31 | Tags: convergence, knowledge-base
+- **20260731-dk-in-8th-terrain-depth-not-destiny** | `Astrology Insights` | 2026-07-31 | Tags: convergence, knowledge-base
+- **20260731-dk-in-8th-house-terrain-card** | `Jaimini` | 2026-07-31 | Tags: boom, knowledge, astrology, jaimini
+- **20260731-soulmate-three-layer-marriage-framework** | `Jaimini` | 2026-07-31 | Tags: boom, knowledge, astrology, jaimini
 - **pick-a-card-if-we-return-to-love-5-piles** | `PAC` |  | Tags: —
 - **pick-a-card-if-we-walk-away-from-this-relationship** | `PAC` |  | Tags: —
 - **pick-a-card-what-cards-want-to-tell-you** | `PAC` |  | Tags: —
 - **PICK-A-CARD-เทวดาประจำตัวอยากบอกอะไร-4-กอง** | `PAC` |  | Tags: —
+- **20260809-hermes-training-technical** | `ML-AI` |  | Tags: —
+- **deepseek-v4-vs-gpt-5.6-technical** | `ML-AI` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
 - **20260809-simple-transit-method-blueprint** | `Astrology` |  | Tags: —
 - **20260809-hermes-training-blueprint** | `ML-AI` |  | Tags: —
 - **deepseek-v4-vs-gpt-5.6-blueprint** | `Plawan` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
-- **20260809-hermes-training-technical** | `ML-AI` |  | Tags: —
-- **deepseek-v4-vs-gpt-5.6-technical** | `ML-AI` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
+- **20260809-simple-transit-method-technical** | `Astrology` |  | Tags: —
+- **20260809-simple-transit-method-critique** | `Astrology` |  | Tags: —
+- **20260809-hermes-training-critique** | `ML-AI` |  | Tags: —
+- **deepseek-v4-vs-gpt-5.6-critique** | `Nan` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
+- **20260809-simple-transit-method-psychological** | `Astrology` |  | Tags: —
+- **deepseek-v4-vs-gpt-5.6-impact** | `CK` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
+- **20260809-simple-transit-method-convergence-report** | `Astrology` |  | Tags: —
+- **20260809-hermes-training-convergence-report** | `ML-AI` |  | Tags: —
+- **deepseek-v4-vs-gpt-5.6-convergence-report** | `Bella` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
+- **20260809-simple-transit-method-audit** | `Astrology` |  | Tags: —
+- **20260809-hermes-training-audit** | `ML-AI` |  | Tags: —
+- **deepseek-v4-vs-gpt-5.6-audit** | `Arm` |  | Tags: ml-ai, llm, model-comparison, deepseek, gpt-5.6
 - **README** | `BooM` |  | Tags: boom, writing-style, reference
