@@ -90,6 +90,8 @@ fi
 if [[ ! -f "$HERMES_HOME/.env" ]]; then
   log_warn "$HERMES_HOME/.env MISSING — copy it from the old machine."
   log_warn "Hermes reads provider keys there; without it providers return 401."
+  log_warn "If you exported it, the file is at hermes-state/.env — copy it:"
+  log_warn "    cp hermes-state/.env \"$HERMES_HOME/.env\""
 fi
 
 # ---- 6. skills mirror: .agents/skills (tier0) -> %HERMES_HOME%/skills (tier1) ----

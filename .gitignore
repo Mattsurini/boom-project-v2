@@ -33,6 +33,9 @@ config.yaml.bak
 config.yaml.*.bak
 state.db*
 
+# export-hermes-state.sh dumps live credentials/tokens here — never in git
+hermes-state/
+
 # Hermes skill-hub cache + curator runtime state, written into the live skill root
 .agents/skills/.hub/
 .agents/skills/.locks/
