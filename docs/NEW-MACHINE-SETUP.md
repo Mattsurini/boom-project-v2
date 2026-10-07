@@ -16,11 +16,14 @@
 ต้องมีก่อน: `git`, Hermes (login ครั้งแรกให้เสร็จ เพื่อให้ `%HERMES_HOME%` ถูกสร้าง), และว่าง path `E:\Boom Project`
 
 ```bash
-git clone <url> "E:/Boom Project"
+git clone https://github.com/Mattsurini/boom-project-v2.git "E:/Boom Project"
 cd "E:/Boom Project"
 ```
 
 clone ได้ ~43MB / ~1200 ไฟล์
+
+> **ใช้ `boom-project-v2`** — repo `boom-project` เดิมถูกลบแล้วเพราะเคยมี API key
+> หลุดใน commit (ดูหัวข้อ "เหตุการณ์ credential" ท้ายเอกสาร)
 
 ## ขั้นที่ 2 — setup (บนเครื่องใหม่)
 
@@ -92,3 +95,18 @@ boom-check
 - **`setup-boom.sh` เดิมตั้ง `HERMES_HOME` เป็นโฟลเดอร์โปรเจกต์** ทำให้ skills mirror / cron / memories / vault ชี้ผิดที่ ตอนนี้ชี้ `%LOCALAPPDATA%\hermes` ถูกต้อง
 - **`boom-transits` เดิมชี้ `transit_timeline_v2.py`** ซึ่งถูกลบไปแล้ว (v3 คือ canonical) แก้เป็น v3
 - **ไม่มี `requirements.txt`** ที่ root เครื่องใหม่จะไม่รู้ว่าต้องติดตั้งอะไร สร้างจาก `pip freeze` แล้ว (131 แพ็กเกจ)
+
+## เหตุการณ์ credential (2026-10-07)
+
+ระหว่างตั้งค่า git พบว่ามี credential หลุดในไฟล์ที่ถูก track — แก้แล้ว แต่ต้องจำไว้:
+
+| ไฟล์ | มีอะไร | จัดการ |
+|---|---|---|
+| `sessions/*.json` (12 ไฟล์) | `Authorization: Bearer *** จริง | ลบออกจากทุก commit |
+| `config.yaml` (root) | `api_key: nvapi-…` จริง | untrack + scrub + แทนด้วย `local-hermes-config.example.yaml` |
+| `config.yaml.bak.20260905_164712` | key เดียวกัน | ลบออกจากทุก commit |
+| `auth.json` | `credential_pool` (มีแต่ชื่อ env + sha2 fingerprint) | ลบออกจากทุก commit |
+
+repo เดิม `boom-project` ถูกลบทิ้งแล้วเพราะ GitHub เก็บ object เก่าไว้ แม้ force-push แล้วก็ยังเข้าถึง commit ที่มี key ได้ (`gh api …/contents/config.yaml?ref=<old-sha>` ยังคืนไฟล์) เลยต้องสร้าง repo ใหม่ที่ชื่อ `boom-project-v2`
+
+**NVIDIA key ต้อง rotate** — มันเคยอยู่ใน git ที่ push แล้ว ไม่ว่าจะลบ history ยังไง ก็ถือว่ารั่วแล้ว
