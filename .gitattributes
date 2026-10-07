@@ -1,0 +1,34 @@
+# Boom Project line-ending policy
+#
+# This host has core.autocrlf=true, so a fresh Windows clone would check out
+# every shell script as CRLF. Bash then fails with `$'\r': command not found`
+# on the shebang line — setup-boom.sh, the thing that rebuilds a new machine,
+# would not run at all. Pin the endings instead of relying on per-machine config.
+
+# Shell + config consumed by tooling: must stay LF everywhere.
+*.sh        text eol=lf
+*.bash      text eol=lf
+*.py        text eol=lf
+*.js        text eol=lf
+*.mjs       text eol=lf
+*.json      text eol=lf
+*.yaml      text eol=lf
+*.yml       text eol=lf
+*.toml      text eol=lf
+.gitignore  text eol=lf
+.gitattributes text eol=lf
+
+# Markdown: content is what matters, not the layout.
+*.md        text eol=lf
+
+# Never touched by the text pipeline.
+*.ttf       binary
+*.exe       binary
+*.dll       binary
+*.so        binary
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.woff2     binary
+*.sqlite3   binary
+*.db        binary
