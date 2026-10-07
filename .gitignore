@@ -36,15 +36,18 @@ sessions/
 .curator_ledger.jsonl
 
 # --- upstream repos vendored as directories (re-clone, don't vendor) ---
-stellium/
-power-design/
-frontend-slides/
-Deep-Research-skills/
+# Anchored with a leading slash so these match at the project root ONLY.
+# Without it, `frontend-slides/` also hides .agents/skills/productive/frontend-slides/
+# and the skill vanishes from a fresh clone.
+/stellium/
+/power-design/
+/frontend-slides/
+/Deep-Research-skills/
 
 # --- big binaries / generated artifacts ---
-bin/
-.rebuild/
-.quarantine/
+/bin/
+/.rebuild/
+/.quarantine/
 
 # --- knowledge corpus: ~1GB of scanned PDFs stays on disk, not in git ---
 # Committed instead: the derived indexes under Knowledge/indexes/
